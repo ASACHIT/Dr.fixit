@@ -129,7 +129,7 @@ class drfix:
         clearScr() #clear
         inssnap() #check if snap is installed
         logo()   #banner animation
-        clearScr()
+        clearScr() #clear screen
         banr()   #drfixit banner
         print (color.GREEN + '''
   〘-------------≪⊶≼ Programmed By SACHIT ≽⊷≫-------------〙
