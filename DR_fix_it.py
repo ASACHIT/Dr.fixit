@@ -781,5 +781,5 @@ if __name__ == "__main__":
         drfix()
     except KeyboardInterrupt:
         print(" Finishing up...\n")
-        time.sleep(0.45)        
+        time.sleep(0.44)        
         
