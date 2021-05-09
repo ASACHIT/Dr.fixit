@@ -222,7 +222,7 @@ class Multimedia:
         print("  〘3〙═〢Rythmbox (music player)")
         print("  〘4〙═〢GIMP- GNU image Manipulation program(photoshop alternative) ")
         print("  〘5〙═〢Audacity (Audio software for multi-track recording and editing)")
-        print("  〘88〙═〢Back To Main Menu \n")
+        print("  〘55〙═〢Back To Main Menu \n")
         usrinput2 = input(drprompt)
         clearScr()
         if usrinput2 == "1":
@@ -236,7 +236,7 @@ class Multimedia:
         elif usrinput2 == "5":
             adcity()
         
-        elif usrinput2 == "88":
+        elif usrinput2 == "55":
             drfix()
         else:
             self.__init__()
@@ -343,14 +343,14 @@ class office:
 
         print("  {1}--Libre office (alternative for MS office)")
     
-        print("  {77}-Back To Main Menu \n")
+        print("  {66}-Back To Main Menu \n")
 
 
         usrinput3= input(drprompt)
         clearScr()
         if usrinput3 == "1":
             libof()       
-        elif usrinput3 == "77":
+        elif usrinput3 == "66":
             drfix()
         else:
             self.__init__()
@@ -398,7 +398,7 @@ class internet():
             print("  {5}--Discord")
             print("  {6}--Brave Browser")
             print("  {7}--Opera browser")
-            print("  {88}-Back To Main Menu \n")
+            print("  {77}-Back To Main Menu \n")
 
 
             usrinput4 = input(drprompt)
@@ -421,7 +421,7 @@ class internet():
             elif usrinput4 == "6":
                 bravebrowser()
 
-            elif usrinput4 == "88":
+            elif usrinput4 == "77":
                 drfix()
             else:
                 self.__init__()
