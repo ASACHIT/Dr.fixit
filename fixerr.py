@@ -50,7 +50,7 @@ def bt():
     time.sleep(3)
 
 
-def update():
+def uperror():
     clr()
     print(color.CYAN+"error while updating packages?,and while installing packages?")
     time.sleep(2)
@@ -59,6 +59,17 @@ def update():
     time.sleep(3)
     print(color.GREEN+"wait a while, this may take more time !")
     time.sleep(1.5)
-    os.system('sudo apt update --fix-missing && sudo apt fix-broken-install')      
+    os.system('sudo apt update --fix-missing && sudo apt --fix-broken install')      
     time.sleep(2)
     print(color.CYAN+"Everything done.. !!")
+
+def update():
+    clr()
+    print(color.GREEN+"updating...")   
+    time.sleep(3)
+    print(color.GREEN+"This may take more time, wait..")
+    time.sleep(1.5)
+    os.system('sudo apt update -y && sudo apt full-upgrade -y')
+    time.sleep(2.5)
+    print(color.GREEN+"DONE !!")
+    time.sleep(2.5)

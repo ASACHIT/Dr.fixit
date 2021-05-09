@@ -175,9 +175,13 @@ class drfix:
             fixerr.bt()    
 
         elif usrinput == "2":
-            fixerr.update()    
+            fixerr.update()
+
+        elif usrinput5 == "1":
+            fixerr.uperror()    
+              
         elif usrinput == "0":
-            snapupdate()
+            snapp()
         elif usrinput == "00":
             cont()
         elif usrinput == "99":
