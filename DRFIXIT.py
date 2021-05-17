@@ -575,7 +575,7 @@ class dev():
             if usrinput5 == "1":
                 pycharm()
 
-            elif usrinput5 == "4":
+            elif usrinput5 == "2":
                 vscode()
 
             elif usrinput5 == "3":
@@ -644,7 +644,11 @@ class vscode():
         print(color.LYELLOW+"Vs code is not installed !!")
         time.sleep(1.5)
         print(color.LYELLOW+"Installing...")
-        os.system("sudo snap refresh && sudo snap install code --classic")
+        os.system("curl https://az764295.vo.msecnd.net/stable/054a9295330880ed74ceaedda236253b4f39a335/code_1.56.2-1620838498_amd64.deb -o vs.deb")
+        time.sleep(1)
+        os.system("sudo dpkg -i vs.deb")
+        time.sleep(1)
+        os.system("sudo rm -rf vs.deb")
         print(color.LYELLOW+"Visual studio code installed !!")    
 
         
