@@ -7,4 +7,4 @@ Python script to setup linux with important softwares and fixing minor issues
 
 ```pip3 install -r requirement.txt```
 
-```python3 Dr.fixit.py```
+```python3 DRFIXIT.py```
