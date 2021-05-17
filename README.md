@@ -1,6 +1,6 @@
 # Dr.fixit
 Python script to setup linux with important softwares and fixing minor issues
-# TO Run It, Following Commands
+# TO Run It, Run Following Commands
 ```git clone https://github.com/SACHIT69/Dr.fixit.git```
 
 ```cd Dr.fixit```
