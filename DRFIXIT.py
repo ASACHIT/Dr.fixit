@@ -186,10 +186,10 @@ class drfix:
                       ______
                      |ERRORS|
                
-       〘1〙═〢Errors while running apt update command
-       〘2〙═〢Update/ full upgrade linux
-       〘3〙═〢FIX no sound output
-       〘4〙═〢Bluetooth not working/ can't turn on
+       〘1〙═〢 Errors while running apt update command
+       〘2〙═〢 Update/ full upgrade linux
+       〘3〙═〢 FIX no sound output
+       〘4〙═〢 Bluetooth not working/ can't turn on
             ══════════════════════════
             |sᴏғᴛᴡᴀʀᴇs/ᴀᴘᴘ sᴛᴏʀᴇ ғᴏʀ ʟɪɴᴜx|
             ══════════════════════════ 
@@ -197,14 +197,14 @@ class drfix:
            |ᴄᴀᴛᴀɢᴏʀɪᴇs ᴏғ sᴏᴛᴡᴀʀᴇs ᴛᴏ ɪɴsᴛᴀʟʟ|
             ════════════════════════════
             
-       〘5〙═〢Multimedia
-       〘6〙═〢Office
-       〘7〙═〢Internet
-       〘8〙═〢Developing/programming softwares
-       〘9〙═〢Utility Softwares
-       〘0〙═〢UPDATE SNAP
-       〘00〙═〢CONTRIBUTORS/ABOUT ME
-       〘99〙═〢EXIT\n
+       〘5〙═〢 Multimedia
+       〘6〙═〢 Office
+       〘7〙═〢 Internet
+       〘8〙═〢 Developing/programming softwares
+       〘9〙═〢 Utility Softwares
+       〘0〙═〢 UPDATE SNAP
+       〘00〙═〢 CONTRIBUTORS/ABOUT ME
+       〘99〙═〢 EXIT\n
 
        TYPE THE NAME OF SOFTWARES BELOW TO OPEN INSTALLED SOFTWARES
      ''')
