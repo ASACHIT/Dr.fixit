@@ -79,7 +79,7 @@ class stacer():
 class obs():
     def __init__(self):
         print(mm.color.GREEN+"checking OBS in system...")
-        if not shutil.which('stacer'):
+        if not shutil.which('obs-studio'):
             self.install()
 
         else:
