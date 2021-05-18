@@ -1,7 +1,7 @@
 import time
 import os
 import shutil
-import multimedia as mm
+from scripts import multimedia as mm
 ain = "Already Installed"
 
 

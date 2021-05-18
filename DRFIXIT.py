@@ -6,14 +6,13 @@ import getpass
 from sys import argv
 import shutil
 import distro
-#------------------------
-import fixerr
-import multimedia as mm
-import internet as intr
-import devp as dv
 
-
-
+# ------------------------
+from scripts import utilityy as utl
+from scripts import fixerr
+from scripts import multimedia as mm
+from scripts import internet as intr
+from scripts import devp as dv
 
 
 subprocess.run(["clear"])
@@ -96,7 +95,6 @@ continuePrompt = "\nPress Any Key to continue "
 ain = "Already Installed :)"
 
 
-
 class color:
 
     BLUE = '\033[94m'
@@ -125,7 +123,7 @@ class inssnap():
         print('checking distro...')
         dist = distro.linux_distribution(full_distribution_name=False)[0]
 
-        if dist == 'kali':
+        if dist == 'kali' or 'ubuntu' or 'parrotos':
             b = 'sudo apt install snapd && sudo systemctl enable --now snapd apparmor'
             os.system(f'{b}')
 
@@ -138,33 +136,40 @@ class inssnap():
         elif dist == 'fedora':
             os.system('sudo dnf install snapd')
             os.system('sudo ln -s /var/lib/snapd/snap /snap')
-            
+
         elif dist == 'centos':
-            print('sorry, i was unable run in this distro')
+            os.system('sudo yum install epel-release')
+            os.system(
+                'sudo yum install snapd && sudo systemctl enable --now snapd.socket && sudo ln -s /var/lib/snapd/snap /snap')
             exit()
         elif dist == 'manjaro':
-            os.system('sudo pacman -S snapd && sudo systemctl enable --now snapd.socket') 
+            os.system(
+                'sudo pacman -S snapd && sudo systemctl enable --now snapd.socket')
+            os.system('sudo ln -s /var/lib/snapd/snap /snap')
 
-            
+        elif dist == 'mint':
+            os.system('sudo rm /etc/apt/preferences.d/nosnap.pref && sudo apt update && sudo apt install snapd')  
+
+       
+
 
         else:
             try:
-                os.system('sudo apt install snapd')
-            except Exception as errr:
+                os.system('sudo apt install snapd ')
+            except os.error as errr:
                 print("i was unable to install geany :( error=", errr)
+                time.sleep(4)
 
-        os.system("sudo apt install snapd && sudo systemctl enable --now snapd apparmor")
-
-
-
+                print('please submitt a issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you')
+                time.sleep(5)
+                exit()
 
 
 class upsnap():
     def __init__(self):
         print("Checking for Updates...")
         time.sleep(2.5)
-        os.system("sudo snap refresh")
-
+        os.system("snap refresh")
 
 
 class drfix:
@@ -198,12 +203,12 @@ class drfix:
        〘8〙═〢Developing/programming softwares
        〘9〙═〢Utility Softwares
        〘0〙═〢UPDATE SNAP
-       〘00〙═〢CONTRIBUTORS
+       〘00〙═〢CONTRIBUTORS/ABOUT ME
        〘99〙═〢EXIT\n
 
        TYPE THE NAME OF SOFTWARES BELOW TO OPEN INSTALLED SOFTWARES
      ''')
-        usrinput = input(drprompt)
+        usrinput = input(color.GREEN+drprompt)
         clearScr()
         if usrinput == "5":
             Multimedia()
@@ -212,9 +217,9 @@ class drfix:
         elif usrinput == "7":
             internet()
         elif usrinput == "8":
-            dev()
+            devlopments()
         elif usrinput == "9":
-            print('this option will be available soon')
+            utility()
         elif usrinput == "3":
             fixerr.nosound()
         elif usrinput == "4":
@@ -227,7 +232,7 @@ class drfix:
             fixerr.uperror()
 
         elif usrinput == "0":
-            upsnap()            
+            upsnap()
         elif usrinput == "00":
             cont()
         elif usrinput == "99":
@@ -249,7 +254,15 @@ class drfix:
 
 
 def cont():
-    print(colored("Greet's to Manjaro_[Brahma]", "green", attrs=['bold']))
+    print(color.CYAN+'''Greets TO Dibash Thapa ''' +
+          color.GREEN+'''
+     
+     
+            About me
+       Name-Sachit Yadav
+          AGE- 17 yrs
+          From- Nepal
+    ''')
 
 
 class Multimedia:
@@ -271,7 +284,7 @@ class Multimedia:
         print("  〘4〙═〢GIMP- GNU image Manipulation program(photoshop alternative) ")
         print("  〘5〙═〢Audacity (Audio software for multi-track recording and editing)")
         print("  〘55〙═〢Back To Main Menu \n")
-        usrinput2 = input(drprompt)
+        usrinput2 = input(color.WHITE+drprompt)
         clearScr()
         if usrinput2 == "1":
             mm.vlc()
@@ -294,7 +307,6 @@ class Multimedia:
         input(color.GREEN+"Completed, press anykey to go back")
         self.__init__()
 # ----------------------------------------------------------------
-
 
 
 class snapupdate():
@@ -325,9 +337,9 @@ class office:
         clearScr()
         print(color.GREEN+self.banner)
 
-        print("  {1}--Libre office (alternative for MS office)")
+        print(" 〘1〙═〢 Libre office (alternative for MS office)")
 
-        print("  {66}-Back To Main Menu \n")
+        print(" 〘66〙═〢Back To Main Menu \n")
 
         usrinput3 = input(drprompt)
         clearScr()
@@ -372,20 +384,19 @@ class internet():
         clearScr()
         print(color.LYELLOW+self.banner)
 
-        print("  {1}--Google Chrome")
-        print("  {4}--Mozilla Firefox")
-        print("  {3}--Chromium")
-        print("  {4}--Thundermail mailer ")
-        print("  {5}--Discord")
-        print("  {6}--Brave Browser")
-        print("  {7}--Opera browser")
-        print("  {77}-Back To Main Menu \n")
+        print(" 〘1〙═〢Google Chrome")
+        print(" 〘2〙═〢Mozilla Firefox")
+        print(" 〘3〙═〢Chromium")
+        print(" 〘4〙═〢Thundermail mailer ")
+        print(" 〘5〙═〢Discord")
+        print(" 〘6〙═〢Brave Browser")
+        print(" 〘7〙═〢Opera browser")
+        print(" 〘77〙═〢Back To Main Menu \n")
 
-        usrinput4 = input(drprompt)
+        usrinput4 = input(color.XYZ+drprompt)
         clearScr()
         if usrinput4 == "1":
             intr.gchrome()
-            
         elif usrinput4 == "4":
             intr.mozilla()
         elif usrinput4 == "3":
@@ -397,8 +408,7 @@ class internet():
         elif usrinput4 == "6":
             intr.bravebrowser()
         elif usrinput4 == "7":
-            intr.opera() 
-
+            intr.opera()
         elif usrinput4 == "77":
             drfix()
         else:
@@ -410,13 +420,12 @@ class internet():
         self.__init__()
 
 
-
 # -------------------------------------------------------------------------------------------------------------
 
 
 # class development and programming
 
-class dev():
+class devlopments:
     banner = '''
      ____                 _                                  _   
     |  _ \  _____   _____| | ___  _ __  _ __ ___   ___ _ __ | |_ 
@@ -438,9 +447,9 @@ class dev():
         print("  〘6〙═〢 Php Storm")
         print("  〘7〙═〢 Flutter")
         print("  〘8〙═〢 Atom")
-        print("  {88}-Back To Main Menu \n")
+        print("  〘88〙═〢Back To Main Menu \n")
 
-        usrinput5 = input(drprompt)
+        usrinput5 = input(color.RED+drprompt)
         clearScr()
         if usrinput5 == "1":
             dv.pycharm()
@@ -467,7 +476,7 @@ class dev():
             dv.atom()
 
         elif usrinput5 == "88":
-            dv.drfix()
+            drfix()
 
         else:
             self.__init__()
@@ -478,13 +487,66 @@ class dev():
         self.__init__()
 
 
-# sub classes for development and programming softwares
+# class utility Softwares
+
+class utility:
+    banner = '''
+     _   _ _____ ___ _     ___ _______   __
+    | | | |_   _|_ _| |   |_ _|_   _\ \ / /
+    | | | | | |  | || |    | |  | |  \ V / 
+    | |_| | | |  | || |___ | |  | |   | |  
+     \___/  |_| |___|_____|___| |_|   |_|  
+                                       
+
+    '''
+
+    def __init__(self):
+        clearScr()
+        print(color.LMAGENTA+self.banner)
+
+        print("  〘1〙═〢 Stacer(best GUI system monitor software")
+        print("  〘2〙═〢 Geany GUI text editor")
+        print("  〘3〙═〢 OBS video recorder")
+        print("  〘4〙═〢 Ksnip Screeshot tool ")
+        print("  〘5〙═〢 Microsoft Teams")
+        
+        print("  {99}-Back To Main Menu \n")
+
+        usrinput6 = input(drprompt)
+        clearScr()
+        if usrinput6 == "1":
+            utl.stacer()
+
+        elif usrinput6 == "2":
+            utl.geany()
+
+        elif usrinput6 == "3":
+            utl.obs()
+
+        elif usrinput6 == "4":
+            utl.ksnip()
+
+        elif usrinput6 == "5":
+            utl.msteam()
+
+        
+
+        elif usrinput6 == "99":
+            drfix()
+
+        else:
+            self.__init__()
+        self.completed()
+
+    def completed(self):
+        input(color.GREEN+"Completed,press anykey to go back")
+        self.__init__()
+
 
 if __name__ == "__main__":
-    while True:
-        try:
+    try:
 
-            drfix()
-        except KeyboardInterrupt:
-            print(" Finishing up...\n")
-            time.sleep(0.45)
+        drfix()
+    except KeyboardInterrupt:
+        print(" Finishing up...\n")
+        time.sleep(0.45)
