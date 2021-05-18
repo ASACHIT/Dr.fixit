@@ -8,3 +8,26 @@ Python script to setup linux with important softwares and fixing minor issues
 ```pip3 install -r requirement.txt```
 
 ```python3 DRFIXIT.py```
+# Supported Platforms
+**[1] kali linux**
+
+**[2] Fedora**
+
+**[3] Manjaro OS**
+
+**[4] Linux mint**
+
+**[5] Centos**
+
+**[6] Arch Linux**
+
+**[7] other debian based Distros..**
+
+**[8] It may run in other distro also...(not tested)**
+
+# It can 
+```Install Most Have softwares as per Users Need```
+
+```Script can Fix minor Issues that occur in linux```
+
+**(It uses snap and systems package manager)**
