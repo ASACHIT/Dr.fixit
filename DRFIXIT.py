@@ -5,7 +5,7 @@ import subprocess
 import getpass
 from sys import argv
 import shutil
-
+import distro
 #------------------------
 import fixerr
 import multimedia as mm
@@ -122,7 +122,43 @@ class inssnap():
     def install(self):
         print("installing required tool..to run this script...")
         time.sleep(3)
+        print('checking distro...')
+        dist = distro.linux_distribution(full_distribution_name=False)[0]
+
+        if dist == 'kali':
+            b = 'sudo apt install snapd && sudo systemctl enable --now snapd apparmor'
+            os.system(f'{b}')
+
+        elif dist == 'arch':
+            os.system('git clone https://aur.archlinux.org/snapd.git')
+            os.system('cd snapd')
+            os.system('makepkg -si')
+            os.system('sudo systemctl enable --now snapd.socket && sudo ln -s /var/lib/snapd/snap /snap')
+
+        elif dist == 'fedora':
+            os.system('sudo dnf install snapd')
+            os.system('sudo ln -s /var/lib/snapd/snap /snap')
+            
+        elif dist == 'centos':
+            print('sorry, i was unable run in this distro')
+            exit()
+        elif dist == 'manjaro':
+            os.system('sudo pacman -S snapd && sudo systemctl enable --now snapd.socket') 
+
+            
+
+        else:
+            try:
+                os.system('sudo apt install snapd')
+            except Exception as errr:
+                print("i was unable to install geany :( error=", errr)
+
         os.system("sudo apt install snapd && sudo systemctl enable --now snapd apparmor")
+
+
+
+
+
 class upsnap():
     def __init__(self):
         print("Checking for Updates...")
@@ -135,6 +171,7 @@ class drfix:
     def __init__(self):
         clearScr()  # clear
         inssnap()  # check if snap is installed
+        clearScr()
         logo()  # banner animation
         clearScr()  # clear screen
         banr()  # drfixit banner
@@ -444,9 +481,10 @@ class dev():
 # sub classes for development and programming softwares
 
 if __name__ == "__main__":
-    try:
+    while True:
+        try:
 
-        drfix()
-    except KeyboardInterrupt:
-        print(" Finishing up...\n")
-        time.sleep(0.45)
+            drfix()
+        except KeyboardInterrupt:
+            print(" Finishing up...\n")
+            time.sleep(0.45)

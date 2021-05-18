@@ -53,7 +53,7 @@ class bravebrowser():
         print("brave is not installed !!")
         time.sleep(1.5)
         print("Installing...")
-        os.system("sudo snap install brave")
+        os.system(" snap install brave")
         print("Brave browser installed !")
 
 
@@ -70,7 +70,7 @@ class Chromium():
         print("Chromium is not installed !!")
         time.sleep(1.5)
         print("Installing...")
-        os.system("sudo snap install chromium")
+        os.system("snap install chromium")
         print("Chromium browser installed !")
 
 
@@ -87,7 +87,7 @@ class thmailer():
         print(" is not installed !!")
         time.sleep(1.5)
         print("Installing...")
-        os.system("sudo snap install thunderbird ")
+        os.system("snap install thunderbird ")
         print("Thunderbird mailer installed !")
 
 
@@ -104,5 +104,5 @@ class opera():
         print("Opera is not installed !!")
         time.sleep(1.5)
         print("Installing...")
-        os.system("sudo snap install opera")
+        os.system("snap install opera")
         print(" installed !")

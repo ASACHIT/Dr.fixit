@@ -43,7 +43,13 @@ class vlc:
             print(color.GREEN+ain)
  
     def install(self):
-        os.system("sudo snap install vlc")
+        try:
+
+            os.system("snap install vlc")
+        except OSError:
+            print("Failed to install :(")
+            exit()   
+
 #----------------------------------------------------------------
 class spotify:
     def __init__(self):
@@ -57,7 +63,11 @@ class spotify:
         else:
             print(color.GREEN+ain)
     def install(self):
-        os.system("sudo snap install spotify")    
+        try:
+            os.system("snap install spotify")  
+        except OSError:
+            print("Failed to install :(")
+            exit()      
 
 
 
@@ -72,7 +82,11 @@ class Rythmbox:
         else:
             print(ain)
     def install(self):
-        os.system("sudo apt install rhythmbox")                       
+        try:
+            os.system("apt install rhythmbox")                  
+        except OSError:
+            print("Failed to install :(")
+            exit()         
 #----------------------------------------------------------------
 class GIMP():
     def __init__(self):
@@ -84,7 +98,11 @@ class GIMP():
         else:
             print(ain)
     def install(self):
-        os.system("sudo snap install gimp")   
+        try:
+            os.system("snap install gimp")   
+        except OSError:
+            print("Failed to install :(")
+            exit()    
 
 
 class adcity():
@@ -94,8 +112,11 @@ class adcity():
             self.install()
         else:
             print(ain)
-            response = input(continuePrompt)
+            
     def install(self):
-        print("Installing audacity")
-        os.system("sudo snap install audacity")
+        try:
+            os.system("snap install audacity")
+        except OSError:
+            print("Failed to install :(")
+            exit()    
      
