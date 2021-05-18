@@ -214,7 +214,7 @@ class drfix:
         elif usrinput == "8":
             dev()
         elif usrinput == "9":
-            snapp()
+            print('this option will be available soon')
         elif usrinput == "3":
             fixerr.nosound()
         elif usrinput == "4":
