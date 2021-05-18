@@ -6,7 +6,7 @@ import getpass
 from sys import argv
 import shutil
 import distro
-
+import threading
 # ------------------------
 from scripts import utilityy as utl
 from scripts import fixerr
@@ -110,6 +110,8 @@ class color:
 def clearScr():
     os.system('clear')
 
+def supdate():
+    os.system('cd scripts && sudo ./update.sh')
 
 class inssnap():
     def __init__(self):
@@ -168,16 +170,16 @@ class inssnap():
 class upsnap():
     def __init__(self):
         print("Checking for Updates...")
-        time.sleep(2.5)
+        time.sleep(1)
         os.system("snap refresh")
 
 
 class drfix:
     def __init__(self):
         clearScr()  # clear
-        inssnap()  # check if snap is installed
-        clearScr()
-        logo()  # banner animation
+        
+        threading.Thread(target=inssnap).start() #check snap in system 
+        threading.Thread(target=logo).start() # to run parallely
         clearScr()  # clear screen
         banr()  # drfixit banner
         print(color.GREEN + '''
@@ -203,7 +205,7 @@ class drfix:
        〘7〙═〢 Internet
        〘8〙═〢 Developing/programming softwares
        〘9〙═〢 Utility Softwares
-       〘0〙═〢 UPDATE SNAP
+       〘0〙═〢 UPDATE SNAP and This Tool
        〘00〙═〢 CONTRIBUTORS/ABOUT ME
        〘99〙═〢 EXIT\n
 
@@ -234,6 +236,8 @@ class drfix:
 
         elif usrinput == "0":
             upsnap()
+            time.sleep(1)
+            supdate()
         elif usrinput == "00":
             cont()
         elif usrinput == "99":
