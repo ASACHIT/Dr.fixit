@@ -90,7 +90,7 @@ class obs():
         dist = distro.linux_distribution(full_distribution_name=False)[0]
 
         if dist == 'kali' or 'ubuntu' or 'mint' or 'parrot':
-            os.system('sudo snap install obs-sudio')
+            os.system('sudo snap install obs-studio')
 
         elif dist == 'arch':
             os.system('sudo pacman -S obs-studio')
