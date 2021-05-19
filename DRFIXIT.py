@@ -113,7 +113,7 @@ def clearScr():
 def supdate():
     os.system('cd scripts && sudo ./update.sh')
 
-class inssnap():
+class check_snap():
     def __init__(self):
 
         if not shutil.which('snap'):
@@ -178,7 +178,7 @@ class drfix:
     def __init__(self):
         clearScr()  # clear
         
-        threading.Thread(target=inssnap).start() #check snap in system 
+        threading.Thread(target=check_snap).start() #check snap in system 
         threading.Thread(target=logo).start() # to run parallely
         clearScr()  # clear screen
         banr()  # drfixit banner
@@ -204,7 +204,7 @@ class drfix:
        〘6〙═〢 Office
        〘7〙═〢 Internet
        〘8〙═〢 Developing/programming softwares
-       〘9〙═〢 Utility Softwares
+       〘9〙═〢 Utility Softwares/Extras
        〘0〙═〢 UPDATE SNAP and This Tool
        〘00〙═〢 CONTRIBUTORS/ABOUT ME
        〘99〙═〢 EXIT\n
@@ -517,7 +517,9 @@ class utility:
         print("  〘3〙═〢 OBS video recorder")
         print("  〘4〙═〢 Ksnip Screeshot tool ")
         print("  〘5〙═〢 Microsoft Teams")
-        
+        print("  〘6〙═〢 qbittorrent")
+        print("  〘7〙═〢 Uget Download Manager")
+        print("  〘8〙═〢 Geforce Now for NDVIDIA GPU ||Drivers ")
         print("  {99}-Back To Main Menu \n")
 
         usrinput6 = input(drprompt)
@@ -536,9 +538,14 @@ class utility:
 
         elif usrinput6 == "5":
             utl.msteam()
+        elif usrinput6 == "6":
+            utl.qbit()
 
-        
-
+        elif usrinput6 == "7":
+            utl.uget()
+        elif usrinput6 == "8":
+            utl.Gforce()    
+            
         elif usrinput6 == "99":
             drfix()
 

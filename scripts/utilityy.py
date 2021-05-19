@@ -114,7 +114,7 @@ class obs():
                 exit()
 
 
-class msteam:
+class msteam():
     def __init__(self):
         print(mm.color.GREEN+"checking teams in system...")
         if not shutil.which('teams'):
@@ -186,3 +186,54 @@ class ksnip():
                 time.sleep(5)
                 
                 exit()    
+
+
+class qbit():
+    def __init__(self):
+        print(mm.color.GREEN+"Checking Qbittorrent in your system...")
+        if not shutil.which('qbittorrent'):
+            self.install()
+        else: 
+            print(ain)
+
+
+    def install(self):
+        try:
+            os.system('snap install qbittorrent-arnatious') 
+        except os.error:
+            print("\ni was unable to install qbittorrent-arnatious in your system..:(\n")   
+            time.sleep(2)
+            print("please submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you")
+
+
+class uget():
+    def __init__(self):
+        print(mm.color.GREEN+"Checking Uget in your system...")
+        if not shutil.which('uget'):
+            self.install()
+        else:
+            print(ain)    
+
+    def install(self):   
+        try:
+            os.system('snap install uget --edge')
+
+        except os.error:
+            print("\ni was unable to install uget.. \nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you")                             
+
+
+class Gforce():
+    def __init__(self):
+        print(mm.color.GREEN+"checking Geforce in your system...")
+        if not shutil.which('gforcenow'):
+            self.install()
+
+    def install(self):
+        try:
+            os.system('snap install geforcenow')
+
+        except os.error:
+            print("\ni was unable to install Geforcenow in your system... ") 
+            time.sleep(3)
+            print("\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you")
+                      
