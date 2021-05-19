@@ -208,9 +208,9 @@ class drfix:
        〘9〙═〢 Utility Softwares/Extras
        〘0〙═〢 UPDATE SNAP and This Tool
        〘00〙═〢 CONTRIBUTORS/ABOUT ME
-       〘99〙═〢 EXIT\n
-
-       TYPE THE NAME OF SOFTWARES BELOW TO OPEN INSTALLED SOFTWARES
+       〘99〙═〢 EXIT\n    
+     '''+color.LYELLOW+''' TYPE THE NAME OF SOFTWARES BELOW TO OPEN INSTALLED SOFTWARES
+     
      ''')
         usrinput = input(color.GREEN+drprompt)
         clearScr()
@@ -446,7 +446,7 @@ class devlopments:
 
     def __init__(self):
         clearScr()
-        print(color.LMAGENTA+self.banner)
+        print(color.WHITE+self.banner)
 
         print("  〘1〙═〢 Pycharm CE")
         print("  〘2〙═〢 VS code")
@@ -511,7 +511,7 @@ class utility:
 
     def __init__(self):
         clearScr()
-        print(color.LMAGENTA+self.banner)
+        print(color.GREEN+self.banner)
 
         print("  〘1〙═〢 Stacer(best GUI system monitor software")
         print("  〘2〙═〢 Geany GUI text editor")
