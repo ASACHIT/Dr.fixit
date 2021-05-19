@@ -120,3 +120,15 @@ class adcity():
             print("Failed to install :(")
             exit()    
      
+class shotcut():
+    def __init__(self):
+        print(color.GREEN+"Checking shotcut in system...")
+        if not shutil.which('shotcut'):
+            self.install()
+        else:
+             print(ain)
+    def install(Self):
+        try:
+            os.system("snap install shotcut --classic") 
+        except os.error:
+            print("Failed to install :(, please submitt issue in Github. ")            

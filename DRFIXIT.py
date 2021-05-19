@@ -195,7 +195,7 @@ class drfix:
             ══════════════════════════
             |sᴏғᴛᴡᴀʀᴇs/ᴀᴘᴘ sᴛᴏʀᴇ ғᴏʀ ʟɪɴᴜx|
             ══════════════════════════ 
-                    Version-1.0
+                    Version-1.1
             ════════════════════════════ 
            |ᴄᴀᴛᴀɢᴏʀɪᴇs ᴏғ sᴏᴛᴡᴀʀᴇs ᴛᴏ ɪɴsᴛᴀʟʟ|
             ════════════════════════════
@@ -288,6 +288,7 @@ class Multimedia:
         print("  〘3〙═〢Rythmbox (music player)")
         print("  〘4〙═〢GIMP- GNU image Manipulation program(photoshop alternative) ")
         print("  〘5〙═〢Audacity (Audio software for multi-track recording and editing)")
+        print("  〘6〙═〢Shotcut Best video editor")
         print("  〘55〙═〢Back To Main Menu \n")
         usrinput2 = input(color.WHITE+drprompt)
         clearScr()
@@ -301,6 +302,8 @@ class Multimedia:
             mm.GIMP()
         elif usrinput2 == "5":
             mm.adcity()
+        elif usrinput2 == "6":
+            mm.shotcut()    
 
         elif usrinput2 == "55":
             drfix()
