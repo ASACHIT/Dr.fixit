@@ -43,7 +43,7 @@ class bravebrowser():
     print(mm.color.GREEN+"Checking if Bravebrowser is installed or not...")
 
     def __init__(self):
-        if not shutil.which('brave-browser'):
+        if not shutil.which('brave'):
             self.install()
 
         else:
