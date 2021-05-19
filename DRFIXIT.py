@@ -110,8 +110,10 @@ class color:
 def clearScr():
     os.system('clear')
 
+
 def supdate():
     os.system('cd scripts && sudo ./update.sh')
+
 
 class check_snap():
     def __init__(self):
@@ -133,7 +135,8 @@ class check_snap():
             os.system('git clone https://aur.archlinux.org/snapd.git')
             os.system('cd snapd')
             os.system('makepkg -si')
-            os.system('sudo systemctl enable --now snapd.socket && sudo ln -s /var/lib/snapd/snap /snap')
+            os.system(
+                'sudo systemctl enable --now snapd.socket && sudo ln -s /var/lib/snapd/snap /snap')
 
         elif dist == 'fedora':
             os.system('sudo dnf install snapd')
@@ -150,10 +153,8 @@ class check_snap():
             os.system('sudo ln -s /var/lib/snapd/snap /snap')
 
         elif dist == 'mint':
-            os.system('sudo rm /etc/apt/preferences.d/nosnap.pref && sudo apt update && sudo apt install snapd')  
-
-       
-
+            os.system(
+                'sudo rm /etc/apt/preferences.d/nosnap.pref && sudo apt update && sudo apt install snapd')
 
         else:
             try:
@@ -177,9 +178,9 @@ class upsnap():
 class drfix:
     def __init__(self):
         clearScr()  # clear
-        
-        threading.Thread(target=check_snap).start() #check snap in system 
-        threading.Thread(target=logo).start() # to run parallely
+
+        threading.Thread(target=check_snap).start()  # check snap in system
+        threading.Thread(target=logo).start()  # to run parallely
         clearScr()  # clear screen
         banr()  # drfixit banner
         print(color.GREEN + '''
@@ -303,7 +304,7 @@ class Multimedia:
         elif usrinput2 == "5":
             mm.adcity()
         elif usrinput2 == "6":
-            mm.shotcut()    
+            mm.shotcut()
 
         elif usrinput2 == "55":
             drfix()
@@ -544,8 +545,8 @@ class utility:
         elif usrinput6 == "7":
             utl.uget()
         elif usrinput6 == "8":
-            utl.Gforce()    
-            
+            utl.Gforce()
+
         elif usrinput6 == "99":
             drfix()
 
@@ -559,8 +560,8 @@ class utility:
 
 
 if __name__ == "__main__":
-    try:
 
+    try:
         drfix()
     except KeyboardInterrupt:
         print(" Finishing up...\n")
