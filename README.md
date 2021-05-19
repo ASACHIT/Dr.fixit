@@ -8,7 +8,7 @@ Python script to setup linux with important softwares and fixing minor issues
 ```pip3 install -r requirement.txt```
 
 ```python3 DRFIXIT.py```
-# Supported Platforms
+# Supported Distro
 **[1] kali linux**
 
 **[2] Fedora**
