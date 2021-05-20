@@ -40,9 +40,8 @@ class mozilla():
 
 
 class bravebrowser():
-    print(mm.color.GREEN+"Checking if Bravebrowser is installed or not...")
-
     def __init__(self):
+        print(mm.color.GREEN+"Checking if Bravebrowser is installed or not...")
         if not shutil.which('brave'):
             self.install()
 
@@ -53,7 +52,7 @@ class bravebrowser():
         print("brave is not installed !!")
         time.sleep(1.5)
         print("Installing...")
-        os.system(" snap install brave")
+        os.system("snap install brave")
         print("Brave browser installed !")
 
 

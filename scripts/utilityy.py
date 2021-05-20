@@ -227,6 +227,8 @@ class Gforce():
         print(mm.color.GREEN+"checking Geforce in your system...")
         if not shutil.which('gforcenow'):
             self.install()
+        else:
+            print(ain)    
 
     def install(self):
         try:
@@ -237,3 +239,39 @@ class Gforce():
             time.sleep(3)
             print("\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you")
                       
+class handbrake():
+    def __init__(self):
+        print(mm.color.LYELLOW+"checking handbrake in your system...")
+        if not shutil.which('handbrake'):
+            self.install()
+        else:
+            print(ain)    
+
+
+    def install(self):
+        try:
+            print(mm.color.LYELLOW+'Installing Handbrake in your system')
+            os.system('snap install handbrake-jz')        
+
+        except os.error:
+            print("\ni was unable to install Handbrake in your system... ")
+            time.sleep(2)
+            print("\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you")
+
+
+class kedenlive():
+    def __init__(self):
+        print(mm.color.LYELLOW+"checking Kdenlive in your system...")
+        if not shutil.which('kdenlive'):
+            self.install()
+        else:
+            print(ain)    
+    def install(self):
+        try:
+            print(mm.color.LYELLOW+'Installing Handbrake in your system')
+            os.system('snap install kdenlive')        
+
+        except os.error:
+            print("\ni was unable to install Handbrake in your system... ")
+            time.sleep(2)
+            print("\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you")

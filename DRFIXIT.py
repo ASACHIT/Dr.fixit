@@ -196,7 +196,7 @@ class drfix:
             ══════════════════════════
             |sᴏғᴛᴡᴀʀᴇs/ᴀᴘᴘ sᴛᴏʀᴇ ғᴏʀ ʟɪɴᴜx|
             ══════════════════════════ 
-                    Version-1.1
+                    Version-2.0
             ════════════════════════════ 
            |ᴄᴀᴛᴀɢᴏʀɪᴇs ᴏғ sᴏᴛᴡᴀʀᴇs ᴛᴏ ɪɴsᴛᴀʟʟ|
             ════════════════════════════
@@ -406,6 +406,9 @@ class internet():
         clearScr()
         if usrinput4 == "1":
             intr.gchrome()
+
+        elif usrinput4 == "2":
+            print('this is under devlopment')    
         elif usrinput4 == "4":
             intr.mozilla()
         elif usrinput4 == "3":
@@ -521,7 +524,9 @@ class utility:
         print("  〘6〙═〢 qbittorrent")
         print("  〘7〙═〢 Uget Download Manager")
         print("  〘8〙═〢 Geforce Now for NDVIDIA GPU ||Drivers ")
-        print("  {99}-Back To Main Menu \n")
+        print("  〘9〙═〢 Kdenlive Best Video editor")
+        print("  〘0〙═〢 Handbrake")
+        print("  〘99〙═〢Back To Main Menu \n")
 
         usrinput6 = input(drprompt)
         clearScr()
@@ -546,6 +551,10 @@ class utility:
             utl.uget()
         elif usrinput6 == "8":
             utl.Gforce()
+        elif usrinput6 == "9":
+            utl.kedenlive()
+        elif usrinput6 == "0":
+            utl.handbrake()                
 
         elif usrinput6 == "99":
             drfix()
