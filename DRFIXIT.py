@@ -253,7 +253,7 @@ class drfix:
         self.completed()
 
     def completed(self):
-        input("Completed, press any key  to go back")
+        input("Completed, press Enter key to go back")
         self.__init__()
 
 # -----------------------
@@ -313,7 +313,7 @@ class Multimedia:
         self.completed()
 
     def completed(self):
-        input(color.GREEN+"Completed, press anykey to go back")
+        input(color.GREEN+"Completed, press Enter key to go back")
         self.__init__()
 # ----------------------------------------------------------------
 
@@ -428,7 +428,7 @@ class internet():
         self.completed()
 
     def completed(self):
-        input(color.LYELLOW+"Completed,press anykey to go back")
+        input(color.LYELLOW+"Completed,press Enter key to go back")
         self.__init__()
 
 
@@ -495,7 +495,7 @@ class devlopments:
         self.completed()
 
     def completed(self):
-        input(color.GREEN+"Completed,press anykey to go back")
+        input(color.GREEN+"Completed,press Enter key to go back")
         self.__init__()
 
 
@@ -564,7 +564,7 @@ class utility:
         self.completed()
 
     def completed(self):
-        input(color.GREEN+"Completed,press anykey to go back")
+        input(color.GREEN+"Completed,press Enter key to go back")
         self.__init__()
 
 
