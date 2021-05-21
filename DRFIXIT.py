@@ -473,16 +473,17 @@ class devlopments:
             dv.sublimetext()
 
         elif usrinput5 == "4":
-            dv.bkstudio()
+            print('under development')
 
         elif usrinput5 == "5":
             dv.andstudio()
 
         elif usrinput5 == "6":
-            dv.phpstorm()
+            print("under development")
 
         elif usrinput5 == "7":
-            dv.Flutter()
+            print("under development")
+            
 
         elif usrinput5 == "8":
             dv.atom()

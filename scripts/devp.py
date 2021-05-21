@@ -71,3 +71,44 @@ class andstudio():
         time.sleep(1.5)
         print(mm.color.LYELLOW+"Installing...")
         os.system("sudo snap refresh && sudo snap install android-studio --classic")
+
+
+class atom():
+    def __init__(self):
+        print(mm.color.GREEN+"Checking if Atom is installed or not...")
+        if not shutil.which('atom'):
+            self.install()
+        else:
+            print(mm.color.GREEN+ain)
+
+    def install(self):
+        print(mm.color.LYELLOW+"Atom is not installed !!")
+        time.sleep(1.5)
+        print(mm.color.LYELLOW+"Installing...")
+        try:
+            os.system("sudo snap refresh && sudo snap install atom --classic")
+        except os.error:
+            print(mm.color.LYELLOW+"i was unable to install atom")
+            time.sleep(2)
+            print(mm.color.LYELLOW+"\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you")
+                
+
+class andstudio():
+    def __init__(self):
+        print(mm.color.GREEN+"Checking if Android Studio is installed or not...")
+        if not shutil.which('android-studio'):
+            self.install()
+        else:
+            print(mm.color.GREEN+ain)
+
+    def install(self):
+        print(mm.color.LYELLOW+"Android studio is not installed !!")
+        time.sleep(1.5)
+        print(mm.color.LYELLOW+"Installing...")
+        try:
+            os.system("sudo snap refresh && sudo snap install android-studio --classic")
+        except os.error:
+            print(mm.color.LYELLOW+"i was unable to install Android studio")
+            time.sleep(2)
+            print(mm.color.LYELLOW+"\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you")
+                
