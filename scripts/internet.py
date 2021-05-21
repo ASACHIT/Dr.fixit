@@ -93,7 +93,7 @@ class thmailer():
 class opera():
     def __init__(self):
         print(mm.color.GREEN+"Checking if Opera is installed or not...")
-        if not shutil.which(''):
+        if not shutil.which('opera'):
             self.install()
 
         else:
@@ -104,4 +104,21 @@ class opera():
         time.sleep(1.5)
         print("Installing...")
         os.system("snap install opera")
+        print(" installed !")
+
+
+class discord():
+    def __init__(self):
+        print(mm.color.GREEN+"Checking if Discord is installed or not...")
+        if not shutil.which('discord'):
+            self.install()
+
+        else:
+            print(ain)
+
+    def install(self):
+        print("Discord is not installed !!")
+        time.sleep(1.5)
+        print("Installing...")
+        os.system("snap install discord")
         print(" installed !")
