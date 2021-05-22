@@ -189,14 +189,14 @@ class drfix:
                       ______
                      |ERRORS|
                
-       〘1〙═〢 Errors while running apt update command
+       〘1〙═〢 Errors while running [apt update] command
        〘2〙═〢 Update/ full upgrade linux
        〘3〙═〢 FIX no sound output
        〘4〙═〢 Bluetooth not working/ can't turn on
             ══════════════════════════
             |sᴏғᴛᴡᴀʀᴇs/ᴀᴘᴘ sᴛᴏʀᴇ ғᴏʀ ʟɪɴᴜx|
             ══════════════════════════ 
-                    Version-2.0
+                    Version-2.2
             ════════════════════════════ 
            |ᴄᴀᴛᴀɢᴏʀɪᴇs ᴏғ sᴏᴛᴡᴀʀᴇs ᴛᴏ ɪɴsᴛᴀʟʟ|
             ════════════════════════════

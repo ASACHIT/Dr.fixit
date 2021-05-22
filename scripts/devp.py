@@ -58,19 +58,6 @@ class sublimetext():
         print(mm.color.LYELLOW+"Sublime text installed !!")
 
 
-class andstudio():
-    def __init__(self):
-        print(mm.color.GREEN+"Checking if Android Studio is installed or not...")
-        if not shutil.which('android-studio'):
-            self.install()
-        else:
-            print(mm.color.GREEN+ain)
-
-    def install(self):
-        print(mm.color.LYELLOW+"Android Studio is not installed !!")
-        time.sleep(1.5)
-        print(mm.color.LYELLOW+"Installing...")
-        os.system("sudo snap refresh && sudo snap install android-studio --classic")
 
 
 class atom():
