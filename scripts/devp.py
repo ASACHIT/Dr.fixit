@@ -34,7 +34,7 @@ class vscode():
         print(mm.color.LYELLOW+"Vs code is not installed !!")
         time.sleep(1.5)
         print(mm.color.LYELLOW+"Installing...")
-        os.system("curl https://az764295.vo.msecnd.net/stable/054a9295330880ed74ceaedda236253b4f39a335/code_1.56.2-1620838498_amd64.deb -o vs.deb")
+        os.system("sudo apt install curl && curl https://az764295.vo.msecnd.net/stable/054a9295330880ed74ceaedda236253b4f39a335/code_1.56.2-1620838498_amd64.deb -o vs.deb")
         time.sleep(1)
         os.system("sudo dpkg -i vs.deb")
         time.sleep(1)
