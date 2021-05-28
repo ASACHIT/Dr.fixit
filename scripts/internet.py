@@ -125,9 +125,9 @@ class discord():
 
 
 class speedtest():
-    
+
     def __init__(self):
-        
+
         if not shutil.which('speedtest-cli'):
             self.spdrun()
 
@@ -136,17 +136,10 @@ class speedtest():
 
     def run(self):
         os.system('speedtest-cli')
-        
-            
-            
+
     def spdrun(self):
         os.system('python3 -m pip install speedtest-cli')
         time.sleep(2)
         os.system('export PATH="$PATH:$HOME/.local/bin"')
         os.system('clear')
         os.system('speedtest-cli')
-
-
-
-
-

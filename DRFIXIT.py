@@ -247,7 +247,7 @@ class drfix:
             cont()
 
         elif usrinput == "11":
-            intr.speedtest()    
+            intr.speedtest()
         elif usrinput == "99":
             exit()
         elif usrinput == "\r" or usrinput == "\n" or usrinput == "" or usrinput == " ":
@@ -415,7 +415,7 @@ class internet():
             intr.gchrome()
 
         elif usrinput4 == "2":
-            print('this is under devlopment')    
+            print('this is under devlopment')
         elif usrinput4 == "4":
             intr.mozilla()
         elif usrinput4 == "3":
@@ -490,7 +490,6 @@ class devlopments:
 
         elif usrinput5 == "7":
             print("under development")
-            
 
         elif usrinput5 == "8":
             dv.atom()
@@ -562,7 +561,7 @@ class utility:
         elif usrinput6 == "9":
             utl.kedenlive()
         elif usrinput6 == "0":
-            utl.handbrake()                
+            utl.handbrake()
 
         elif usrinput6 == "99":
             drfix()
