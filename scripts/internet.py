@@ -122,3 +122,31 @@ class discord():
         print("Installing...")
         os.system("snap install discord")
         print(" installed !")
+
+
+class speedtest():
+    
+    def __init__(self):
+        
+        if not shutil.which('speedtest-cli'):
+            self.spdrun()
+
+        else:
+            self.run()
+
+    def run(self):
+        os.system('speedtest-cli')
+        
+            
+            
+    def spdrun(self):
+        os.system('python3 -m pip install speedtest-cli')
+        time.sleep(2)
+        os.system('export PATH="$PATH:$HOME/.local/bin"')
+        os.system('clear')
+        os.system('speedtest-cli')
+
+
+
+
+

@@ -208,7 +208,11 @@ class drfix:
        〘9〙═〢 Utility Softwares/Extras
        〘0〙═〢 UPDATE SNAP and This Tool
        〘00〙═〢 CONTRIBUTORS/ABOUT ME
-       〘99〙═〢 EXIT\n    
+       〘99〙═〢 EXIT\n  
+
+   〘-------------≪⊶≼ OTHER ≽⊷≫-------------〙
+       〘11〙═〢 Internet SPEED TEST
+
      '''+color.LYELLOW+''' TYPE THE NAME OF SOFTWARES BELOW TO OPEN INSTALLED SOFTWARES
      
      ''')
@@ -241,6 +245,9 @@ class drfix:
             supdate()
         elif usrinput == "00":
             cont()
+
+        elif usrinput == "11":
+            intr.speedtest()    
         elif usrinput == "99":
             exit()
         elif usrinput == "\r" or usrinput == "\n" or usrinput == "" or usrinput == " ":
