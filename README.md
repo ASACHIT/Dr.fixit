@@ -2,7 +2,7 @@
 Python script to setup linux with important softwares and fixing minor issues
 # TO Run It, Run Following Commands
 ```
-git clone https://github.com/SACHIT69/Dr.fixit.git
+git clone https://github.com/ASACHIT/Dr.fixit.git
 cd Dr.fixit
 pip3 install -r requirement.txt
 python3 DRFIXIT.py
