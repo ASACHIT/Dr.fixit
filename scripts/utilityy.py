@@ -1,277 +1,300 @@
-import time
 import os
 import shutil
-from scripts import multimedia as mm
+import time
+
 import distro
+
+from scripts import multimedia as mm
+
 ain = "Already Installed"
 
 
-class geany():
+class geany:
     def __init__(self):
-        print(mm.color.GREEN+"Checking if geany is installed or not...")
-        if not shutil.which('geany'):
+        print(mm.color.GREEN + "Checking if geany is installed or not...")
+        if not shutil.which("geany"):
             self.install()
 
         else:
             print(ain)
 
     def install(self):
-        print('checking distro...')
+        print("checking distro...")
         dist = distro.linux_distribution(full_distribution_name=False)[0]
 
-        if dist == 'kali' or 'ubuntu' or 'debian':
-            os.system('sudo apt install geany')
+        if dist == "kali" or "ubuntu" or "debian":
+            os.system("sudo apt install geany")
 
-        elif dist == 'arch':
-            os.system('sudo snap install geany-gtk --edge')
+        elif dist == "arch":
+            os.system("sudo snap install geany-gtk --edge")
 
-        elif dist == 'fedora':
-            os.system('sudo snap install geany-gtk --edge')
-        
+        elif dist == "fedora":
+            os.system("sudo snap install geany-gtk --edge")
 
         else:
             try:
-                os.system('sudo snap install geany-gtk --edge')
+                os.system("sudo snap install geany-gtk --edge")
             except OSError as errr:
                 print("i was unable to install geany :(   error=", errr)
                 exit()
 
 
-class stacer():
+class stacer:
     def __init__(self):
-        print(mm.color.GREEN+"checking Stacer in system...")
-        if not shutil.which('stacer'):
+        print(mm.color.GREEN + "checking Stacer in system...")
+        if not shutil.which("stacer"):
             self.install()
 
         else:
             print(ain)
 
     def install(self):
-        print('checking distro...')
+        print("checking distro...")
         dist = distro.linux_distribution(full_distribution_name=False)[0]
 
-        if dist == 'kali':
-            os.system('sudo apt install stacer')
+        if dist == "kali":
+            os.system("sudo apt install stacer")
 
-        elif dist == 'arch':
-            os.system('pacman -s stacer')
+        elif dist == "arch":
+            os.system("pacman -s stacer")
 
-        elif dist == 'fedora':
-            os.system('yum install stacer')
-        elif dist == 'gentoo':
-            os.system('emerge -av stacer')
+        elif dist == "fedora":
+            os.system("yum install stacer")
+        elif dist == "gentoo":
+            os.system("emerge -av stacer")
 
-        elif dist == 'manjaro':
-            os.system('sudo pacman -S stacer')    
+        elif dist == "manjaro":
+            os.system("sudo pacman -S stacer")
 
         else:
             try:
-                os.system('sudo apt install stacer')
+                os.system("sudo apt install stacer")
             except OSError as errr:
                 print("i was unable to install geany :( error=", errr)
                 time.sleep(3)
-                print("you can install manually from here.. link- https://github.com/oguzhaninan/Stacer/releases ")
+                print(
+                    "you can install manually from here.. link- https://github.com/oguzhaninan/Stacer/releases "
+                )
                 time.sleep(3)
                 exit()
 
 
-
-class obs():
+class obs:
     def __init__(self):
-        print(mm.color.GREEN+"checking OBS in system...")
-        if not shutil.which('obs-studio'):
+        print(mm.color.GREEN + "checking OBS in system...")
+        if not shutil.which("obs-studio"):
             self.install()
 
         else:
             print(ain)
 
     def install(self):
-        print('checking distro...')
+        print("checking distro...")
         dist = distro.linux_distribution(full_distribution_name=False)[0]
 
-        if dist == 'kali' or 'ubuntu' or 'mint' or 'parrot':
-            os.system('sudo snap install obs-studio')
+        if dist == "kali" or "ubuntu" or "mint" or "parrot":
+            os.system("sudo snap install obs-studio")
 
-        elif dist == 'arch':
-            os.system('sudo pacman -S obs-studio')
+        elif dist == "arch":
+            os.system("sudo pacman -S obs-studio")
 
-        elif dist == 'fedora':
-            os.system(' sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm')
-            os.system('sudo dnf install obs-studio &&  sudo dnf install xorg-x11-drv-nvidia-cuda &&  sudo dnf install xorg-x11-drv-nvidia-340xx-cuda')
-        
+        elif dist == "fedora":
+            os.system(
+                " sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
+            )
+            os.system(
+                "sudo dnf install obs-studio &&  sudo dnf install xorg-x11-drv-nvidia-cuda &&  sudo dnf install xorg-x11-drv-nvidia-340xx-cuda"
+            )
 
-        elif dist == 'manjaro':
-            os.system('sudo pacman -S obs-studio')    
+        elif dist == "manjaro":
+            os.system("sudo pacman -S obs-studio")
 
         else:
             try:
-                os.system('sudo snap install obs-studio')
+                os.system("sudo snap install obs-studio")
             except OSError as errr:
                 print("i was unable to install geany :( error=", errr)
                 time.sleep(3)
-                print("you can install manually from here.. link- https://obsproject.com/wiki/install-instructions#linux ")
+                print(
+                    "you can install manually from here.. link- https://obsproject.com/wiki/install-instructions#linux "
+                )
                 time.sleep(3)
                 exit()
 
 
-class msteam():
+class msteam:
     def __init__(self):
-        print(mm.color.GREEN+"checking teams in system...")
-        if not shutil.which('teams'):
+        print(mm.color.GREEN + "checking teams in system...")
+        if not shutil.which("teams"):
             self.install()
 
         else:
             print(ain)
 
     def install(self):
-        print('checking distro...')
+        print("checking distro...")
         dist = distro.linux_distribution(full_distribution_name=False)[0]
 
-        if dist == 'kali' or 'ubuntu' or 'mint' or 'parrot':
-            os.system('sudo snap install teams')
+        if dist == "kali" or "ubuntu" or "mint" or "parrot":
+            os.system("sudo snap install teams")
 
-        elif dist == 'arch':
-            os.system('sudo snap install teams')
+        elif dist == "arch":
+            os.system("sudo snap install teams")
 
-        elif dist == 'fedora':
-            os.system('sudo snap install teams')
-        
+        elif dist == "fedora":
+            os.system("sudo snap install teams")
 
-        elif dist == 'manjaro':
-            os.system('sudo snap install teams')    
+        elif dist == "manjaro":
+            os.system("sudo snap install teams")
 
         else:
             try:
-                os.system('sudo snap install teams')
+                os.system("sudo snap install teams")
             except OSError as errr:
                 print("i was unable to install teams :(   error=", errr)
                 time.sleep(3)
-                print("you can install manually from here.. link- https://www.microsoft.com/en-ww/microsoft-teams/download-app ")
+                print(
+                    "you can install manually from here.. link- https://www.microsoft.com/en-ww/microsoft-teams/download-app "
+                )
                 time.sleep(3)
                 exit()
 
-class ksnip():
+
+class ksnip:
     def __init__(self):
-        print(mm.color.GREEN+"checking ksnip in system...")
-        if not shutil.which('ksnip'):
+        print(mm.color.GREEN + "checking ksnip in system...")
+        if not shutil.which("ksnip"):
             self.install()
 
         else:
             print(ain)
 
     def install(self):
-        print('checking distro...')
+        print("checking distro...")
         dist = distro.linux_distribution(full_distribution_name=False)[0]
 
-        if dist == 'kali' or 'ubuntu' or 'mint' or 'parrot':
-            os.system('sudo snap install ksnip')
+        if dist == "kali" or "ubuntu" or "mint" or "parrot":
+            os.system("sudo snap install ksnip")
 
-        elif dist == 'arch':
-            os.system('sudo snap install ksnip')
+        elif dist == "arch":
+            os.system("sudo snap install ksnip")
 
-        elif dist == 'fedora':
-            os.system('sudo snap install ksnip')
-        
+        elif dist == "fedora":
+            os.system("sudo snap install ksnip")
 
-        elif dist == 'manjaro':
-            os.system('sudo snap install ksnip')    
+        elif dist == "manjaro":
+            os.system("sudo snap install ksnip")
 
         else:
             try:
-                os.system('sudo snap install ksnip')
+                os.system("sudo snap install ksnip")
             except OSError as errr:
                 print("i was unable to install ksnip :(   error=", errr)
                 time.sleep(3)
-                print('please submitt  issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you')
+                print(
+                    "please submitt  issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you"
+                )
                 time.sleep(5)
-                
-                exit()    
+
+                exit()
 
 
-class qbit():
+class qbit:
     def __init__(self):
-        print(mm.color.GREEN+"Checking Qbittorrent in your system...")
-        if not shutil.which('qbittorrent'):
+        print(mm.color.GREEN + "Checking Qbittorrent in your system...")
+        if not shutil.which("qbittorrent"):
             self.install()
-        else: 
+        else:
             print(ain)
 
-
     def install(self):
         try:
-            os.system('snap install qbittorrent-arnatious') 
+            os.system("snap install qbittorrent-arnatious")
         except os.error:
-            print("\ni was unable to install qbittorrent-arnatious in your system..:(\n")   
+            print(
+                "\ni was unable to install qbittorrent-arnatious in your system..:(\n"
+            )
             time.sleep(2)
-            print("please submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you")
+            print(
+                "please submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you"
+            )
 
 
-class uget():
+class uget:
     def __init__(self):
-        print(mm.color.GREEN+"Checking Uget in your system...")
-        if not shutil.which('uget'):
+        print(mm.color.GREEN + "Checking Uget in your system...")
+        if not shutil.which("uget"):
             self.install()
         else:
-            print(ain)    
-
-    def install(self):   
-        try:
-            os.system('snap install uget --edge')
-
-        except os.error:
-            print("\ni was unable to install uget.. \nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you")                             
-
-
-class Gforce():
-    def __init__(self):
-        print(mm.color.GREEN+"checking Geforce in your system...")
-        if not shutil.which('gforcenow'):
-            self.install()
-        else:
-            print(ain)    
+            print(ain)
 
     def install(self):
         try:
-            os.system('snap install geforcenow')
+            os.system("snap install uget --edge")
 
         except os.error:
-            print("\ni was unable to install Geforcenow in your system... ") 
+            print(
+                "\ni was unable to install uget.. \nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you"
+            )
+
+
+class Gforce:
+    def __init__(self):
+        print(mm.color.GREEN + "checking Geforce in your system...")
+        if not shutil.which("gforcenow"):
+            self.install()
+        else:
+            print(ain)
+
+    def install(self):
+        try:
+            os.system("snap install geforcenow")
+
+        except os.error:
+            print("\ni was unable to install Geforcenow in your system... ")
             time.sleep(3)
-            print("\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you")
-                      
-class handbrake():
+            print(
+                "\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you"
+            )
+
+
+class handbrake:
     def __init__(self):
-        print(mm.color.LYELLOW+"checking handbrake in your system...")
-        if not shutil.which('handbrake'):
+        print(mm.color.LYELLOW + "checking handbrake in your system...")
+        if not shutil.which("handbrake"):
             self.install()
         else:
-            print(ain)    
-
+            print(ain)
 
     def install(self):
         try:
-            print(mm.color.LYELLOW+'Installing Handbrake in your system')
-            os.system('snap install handbrake-jz')        
+            print(mm.color.LYELLOW + "Installing Handbrake in your system")
+            os.system("snap install handbrake-jz")
 
         except os.error:
             print("\ni was unable to install Handbrake in your system... ")
             time.sleep(2)
-            print("\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you")
+            print(
+                "\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you"
+            )
 
 
-class kedenlive():
+class kedenlive:
     def __init__(self):
-        print(mm.color.LYELLOW+"checking Kdenlive in your system...")
-        if not shutil.which('kdenlive'):
+        print(mm.color.LYELLOW + "checking Kdenlive in your system...")
+        if not shutil.which("kdenlive"):
             self.install()
         else:
-            print(ain)    
+            print(ain)
+
     def install(self):
         try:
-            print(mm.color.LYELLOW+'Installing Handbrake in your system')
-            os.system('snap install kdenlive')        
+            print(mm.color.LYELLOW + "Installing Handbrake in your system")
+            os.system("snap install kdenlive")
 
         except os.error:
             print("\ni was unable to install Handbrake in your system... ")
             time.sleep(2)
-            print("\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you")
+            print(
+                "\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you"
+            )

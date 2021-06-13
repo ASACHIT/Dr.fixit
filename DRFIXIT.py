@@ -1,63 +1,123 @@
-from termcolor import colored  # module for colored text
-import os
-import time
-import subprocess
 import getpass
-from sys import argv
+import os
 import shutil
-import distro
+import subprocess
 import threading
-# ------------------------
-from scripts import utilityy as utl
-from scripts import fixerr
-from scripts import multimedia as mm
-from scripts import internet as intr
-from scripts import devp as dv
+import time
+from sys import argv
 
+import distro
+from termcolor import colored  # module for colored text
+
+# ------------------------
+from scripts import devp as dv
+from scripts import fixerr
+from scripts import internet as intr
+from scripts import multimedia as mm
+from scripts import utilityy as utl
 
 subprocess.run(["clear"])
 # --------------------------------------------------------------------------------------------------------------------------------
 
 
-class logo():
-
+class logo:
     def logo1():
 
-        print(colored(
-            "-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+-", "cyan", attrs=['bold']))
-        print(colored("  _____         _____ _    _ _____ _______ ",
-              "green", attrs=['bold']))
-        print(colored(" / ____|  /\   / ____| |  | |_   _|__   __|",
-              "cyan", attrs=['bold']))
-        print(colored(
-            "| (___   /  \ | |    | |__| | | |    | |   ", "yellow", attrs=['bold']))
-        print(colored(" \___ \ / /\ \| |    |  __  | | |    | |   ",
-              "blue", attrs=['bold']))
-        print(colored(" ____) / ____ \ |____| |  | |_| |_   | |   ",
-              "magenta", attrs=['bold']))
-        print(colored("|_____/_/    \_\_____|_|  |_|_____|  |_|          -Do good. Be Ethical.",
-              "white", attrs=['bold']))
-        print(colored(
-            "-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+-\n", "cyan", attrs=['bold']))
+        print(
+            colored(
+                "-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+-",
+                "cyan",
+                attrs=["bold"],
+            )
+        )
+        print(
+            colored(
+                "  _____         _____ _    _ _____ _______ ", "green", attrs=["bold"]
+            )
+        )
+        print(
+            colored(
+                " / ____|  /\   / ____| |  | |_   _|__   __|", "cyan", attrs=["bold"]
+            )
+        )
+        print(
+            colored(
+                "| (___   /  \ | |    | |__| | | |    | |   ", "yellow", attrs=["bold"]
+            )
+        )
+        print(
+            colored(
+                " \___ \ / /\ \| |    |  __  | | |    | |   ", "blue", attrs=["bold"]
+            )
+        )
+        print(
+            colored(
+                " ____) / ____ \ |____| |  | |_| |_   | |   ", "magenta", attrs=["bold"]
+            )
+        )
+        print(
+            colored(
+                "|_____/_/    \_\_____|_|  |_|_____|  |_|          -Do good. Be Ethical.",
+                "white",
+                attrs=["bold"],
+            )
+        )
+        print(
+            colored(
+                "-+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+-\n",
+                "cyan",
+                attrs=["bold"],
+            )
+        )
 
     def logo4():
 
-        print(colored(
-            "═════════════════════════════════════════════════════", "cyan", attrs=['bold']))
-        print(colored("  _____         _____ _    _ _____ _______ ",
-              "magenta", attrs=['bold']))
-        print(colored(" / ____|  /\   / ____| |  | |_   _|__   __|",
-              "green", attrs=['bold']))
         print(
-            colored("| (___   /  \ | |    | |__| | | |    | |   ", "cyan", attrs=['bold']))
-        print(colored(" \___ \ / /\ \| |    |  __  | | |    | |   ",
-              "yellow", attrs=['bold']))
-        print(colored(" ____) / ____ \ |____| |  | |_| |_   | |   ",
-              "blue", attrs=['bold']))
-        print(colored(
-            "|_____/_/    \_\_____|_|  |_|_____|  |_|          -Do good. Be Ethical.", "red", attrs=['bold']))
-        print(colored(
-            "═════════════════════════════════════════════════════\n", "cyan", attrs=['bold']))
+            colored(
+                "═════════════════════════════════════════════════════",
+                "cyan",
+                attrs=["bold"],
+            )
+        )
+        print(
+            colored(
+                "  _____         _____ _    _ _____ _______ ", "magenta", attrs=["bold"]
+            )
+        )
+        print(
+            colored(
+                " / ____|  /\   / ____| |  | |_   _|__   __|", "green", attrs=["bold"]
+            )
+        )
+        print(
+            colored(
+                "| (___   /  \ | |    | |__| | | |    | |   ", "cyan", attrs=["bold"]
+            )
+        )
+        print(
+            colored(
+                " \___ \ / /\ \| |    |  __  | | |    | |   ", "yellow", attrs=["bold"]
+            )
+        )
+        print(
+            colored(
+                " ____) / ____ \ |____| |  | |_| |_   | |   ", "blue", attrs=["bold"]
+            )
+        )
+        print(
+            colored(
+                "|_____/_/    \_\_____|_|  |_|_____|  |_|          -Do good. Be Ethical.",
+                "red",
+                attrs=["bold"],
+            )
+        )
+        print(
+            colored(
+                "═════════════════════════════════════════════════════\n",
+                "cyan",
+                attrs=["bold"],
+            )
+        )
 
     # animators
     logo1()
@@ -73,20 +133,29 @@ class logo():
 
 
 def banr():
-    print(colored("   ═════════════════════════════════════════════════════",
-          "white", attrs=['bold']))
-    print(colored("    ____        _____ _____  _____ _____",
-          "magenta", attrs=['bold']))
-    print(colored("   |  _ \  _ __|  ___|_ _\ \/ /_ _|_   _|",
-          "green", attrs=['bold']))
-    print(colored("   | | | || '__| |_   | | \  / | |  | |  ",
-          "cyan", attrs=['bold']))
-    print(colored("   | |_| || |  |  _|  | | /  \ | |  | |  ",
-          "yellow", attrs=['bold']))
-    print(colored("   |____(_)_|  |_|   |___/_/\_\___| |_| ",
-          "blue", attrs=['bold']))
-    print(colored("   ═════════════════════════════════════════════════════\n",
-          "white", attrs=['bold']))
+    print(
+        colored(
+            "   ═════════════════════════════════════════════════════",
+            "white",
+            attrs=["bold"],
+        )
+    )
+    print(
+        colored("    ____        _____ _____  _____ _____", "magenta", attrs=["bold"])
+    )
+    print(colored("   |  _ \  _ __|  ___|_ _\ \/ /_ _|_   _|", "green", attrs=["bold"]))
+    print(colored("   | | | || '__| |_   | | \  / | |  | |  ", "cyan", attrs=["bold"]))
+    print(
+        colored("   | |_| || |  |  _|  | | /  \ | |  | |  ", "yellow", attrs=["bold"])
+    )
+    print(colored("   |____(_)_|  |_|   |___/_/\_\___| |_| ", "blue", attrs=["bold"]))
+    print(
+        colored(
+            "   ═════════════════════════════════════════════════════\n",
+            "white",
+            attrs=["bold"],
+        )
+    )
 
 
 # =========================================================================================================================================================
@@ -97,78 +166,84 @@ ain = "Already Installed :)"
 
 class color:
 
-    BLUE = '\033[94m'
-    GREEN = '\033[92m'
-    RED = '\033[91m'
-    CYAN = '\033[36m'
-    WHITE = '\033[97m'
-    LYELLOW = '\033[93m'
-    XYZ = '\033[96m'
-    LMAGENTA = '\033[95m'
+    BLUE = "\033[94m"
+    GREEN = "\033[92m"
+    RED = "\033[91m"
+    CYAN = "\033[36m"
+    WHITE = "\033[97m"
+    LYELLOW = "\033[93m"
+    XYZ = "\033[96m"
+    LMAGENTA = "\033[95m"
 
 
 def clearScr():
-    os.system('clear')
+    os.system("clear")
 
 
 def supdate():
-    os.system('cd scripts && sudo ./update.sh')
+    os.system("cd scripts && sudo ./update.sh")
 
 
-class check_snap():
+class check_snap:
     def __init__(self):
 
-        if not shutil.which('snap'):
+        if not shutil.which("snap"):
             self.install()
 
     def install(self):
         print("installing required tool..to run this script...")
         time.sleep(3)
-        print('checking distro...')
+        print("checking distro...")
         dist = distro.linux_distribution(full_distribution_name=False)[0]
 
-        if dist == 'kali' or 'ubuntu' or 'parrotos':
-            b = 'sudo apt install snapd && sudo systemctl enable --now snapd apparmor'
-            os.system(f'{b}')
+        if dist == "kali" or "ubuntu" or "parrotos":
+            b = "sudo apt install snapd && sudo systemctl enable --now snapd apparmor"
+            os.system(f"{b}")
 
-        elif dist == 'arch':
-            os.system('git clone https://aur.archlinux.org/snapd.git')
-            os.system('cd snapd')
-            os.system('makepkg -si')
+        elif dist == "arch":
+            os.system("git clone https://aur.archlinux.org/snapd.git")
+            os.system("cd snapd")
+            os.system("makepkg -si")
             os.system(
-                'sudo systemctl enable --now snapd.socket && sudo ln -s /var/lib/snapd/snap /snap')
+                "sudo systemctl enable --now snapd.socket && sudo ln -s /var/lib/snapd/snap /snap"
+            )
 
-        elif dist == 'fedora':
-            os.system('sudo dnf install snapd')
-            os.system('sudo ln -s /var/lib/snapd/snap /snap')
+        elif dist == "fedora":
+            os.system("sudo dnf install snapd")
+            os.system("sudo ln -s /var/lib/snapd/snap /snap")
 
-        elif dist == 'centos':
-            os.system('sudo yum install epel-release')
+        elif dist == "centos":
+            os.system("sudo yum install epel-release")
             os.system(
-                'sudo yum install snapd && sudo systemctl enable --now snapd.socket && sudo ln -s /var/lib/snapd/snap /snap')
+                "sudo yum install snapd && sudo systemctl enable --now snapd.socket && sudo ln -s /var/lib/snapd/snap /snap"
+            )
             exit()
-        elif dist == 'manjaro':
+        elif dist == "manjaro":
             os.system(
-                'sudo pacman -S snapd && sudo systemctl enable --now snapd.socket')
-            os.system('sudo ln -s /var/lib/snapd/snap /snap')
+                "sudo pacman -S snapd && sudo systemctl enable --now snapd.socket"
+            )
+            os.system("sudo ln -s /var/lib/snapd/snap /snap")
 
-        elif dist == 'mint':
+        elif dist == "mint":
             os.system(
-                'sudo rm /etc/apt/preferences.d/nosnap.pref && sudo apt update && sudo apt install snapd')
+                "sudo rm /etc/apt/preferences.d/nosnap.pref && sudo apt update && sudo apt install snapd"
+            )
 
         else:
             try:
-                os.system('sudo apt install snapd ')
+                os.system("sudo apt install snapd ")
             except os.error as errr:
                 print("i was unable to install geany :( error=", errr)
                 time.sleep(4)
 
-                print('please submitt a issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you')
+                print(
+                    "please submitt a issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you"
+                )
                 time.sleep(5)
                 exit()
 
 
-class upsnap():
+class upsnap:
     def __init__(self):
         print("Checking for Updates...")
         time.sleep(1)
@@ -183,9 +258,13 @@ class drfix:
         threading.Thread(target=logo).start()  # to run parallely
         clearScr()  # clear screen
         banr()  # drfixit banner
-        print(color.GREEN + '''
+        print(
+            color.GREEN
+            + """
   〘-------------≪⊶≼ Programmed By SACHIT ≽⊷≫-------------〙
-    ''' + color.CYAN + '''
+    """
+            + color.CYAN
+            + """
                       ______
                      |ERRORS|
                
@@ -213,10 +292,13 @@ class drfix:
    〘-------------≪⊶≼ OTHER ≽⊷≫-------------〙
        〘11〙═〢 Internet SPEED TEST
 
-     '''+color.LYELLOW+''' TYPE THE NAME OF SOFTWARES BELOW TO OPEN INSTALLED SOFTWARES
+     """
+            + color.LYELLOW
+            + """ TYPE THE NAME OF SOFTWARES BELOW TO OPEN INSTALLED SOFTWARES
      
-     ''')
-        usrinput = input(color.GREEN+drprompt)
+     """
+        )
+        usrinput = input(color.GREEN + drprompt)
         clearScr()
         if usrinput == "5":
             Multimedia()
@@ -263,33 +345,38 @@ class drfix:
         input("Completed, press Enter key to go back")
         self.__init__()
 
+
 # -----------------------
 
 
 def cont():
-    print(color.CYAN+'''Greets TO Dibash Thapa ''' +
-          color.GREEN+'''
+    print(
+        color.CYAN
+        + """Greets TO Dibash Thapa """
+        + color.GREEN
+        + """
      
      
             About me
        Name-Sachit Yadav
           AGE- 17 yrs
           From- Nepal
-    ''')
+    """
+    )
 
 
 class Multimedia:
-    banner = '''
+    banner = """
      __  __       _ _   _                    _ _       
     |  \/  |_   _| | |_(_)_ __ ___   ___  __| (_) __ _ 
     | |\/| | | | | | __| | '_ ` _ \ / _ \/ _` | |/ _` |
     | |  | | |_| | | |_| | | | | | |  __/ (_| | | (_| |
     |_|  |_|\__,_|_|\__|_|_| |_| |_|\___|\__,_|_|\__,_|
-    '''
+    """
 
     def __init__(self):
         clearScr()
-        print(color.XYZ+self.banner)
+        print(color.XYZ + self.banner)
 
         print("  〘1〙═〢VLC media player")
         print("  〘2〙═〢spotify")
@@ -298,7 +385,7 @@ class Multimedia:
         print("  〘5〙═〢Audacity (Audio software for multi-track recording and editing)")
         print("  〘6〙═〢Shotcut Best video editor")
         print("  〘55〙═〢Back To Main Menu \n")
-        usrinput2 = input(color.WHITE+drprompt)
+        usrinput2 = input(color.WHITE + drprompt)
         clearScr()
         if usrinput2 == "1":
             mm.vlc()
@@ -320,12 +407,14 @@ class Multimedia:
         self.completed()
 
     def completed(self):
-        input(color.GREEN+"Completed, press Enter key to go back")
+        input(color.GREEN + "Completed, press Enter key to go back")
         self.__init__()
+
+
 # ----------------------------------------------------------------
 
 
-class snapupdate():
+class snapupdate:
     def __init__(self):
         print("checking for Update in snap")
         time.sleep(1)
@@ -334,24 +423,24 @@ class snapupdate():
         time.sleep(1)
 
 
-'''
+"""
 OFFICE Softwares
-'''
+"""
 
 
 class office:
-    banner = '''
+    banner = """
       ___  _____ _____ ___ ____ _____ 
     / _ \|  ___|  ___|_ _/ ___| ____ |
     | | | | |_  | |_   | | |   |  _|  
     | |_| |  _| |  _|  | | |___| |___ 
     \___/|_|   |_|   |___\____|______|
 
-    '''
+    """
 
     def __init__(self):
         clearScr()
-        print(color.GREEN+self.banner)
+        print(color.GREEN + self.banner)
 
         print(" 〘1〙═〢 Libre office (alternative for MS office)")
 
@@ -368,37 +457,37 @@ class office:
         self.completed()
 
     def completed(self):
-        input(color.GREEN+"Completed, press Enter key to return to main menu")
+        input(color.GREEN + "Completed, press Enter key to return to main menu")
         self.__init__()
 
 
-class libof():
+class libof:
     def __init__(self):
-        print(color.GREEN+"Checking if libreoffice is installed or not.")
-        if not shutil.which('libreoffice'):
+        print(color.GREEN + "Checking if libreoffice is installed or not.")
+        if not shutil.which("libreoffice"):
             self.install()
 
         else:
             print(ain)
 
     def install(self):
-        print(color.GREEN+"Installing libreoffice...")
+        print(color.GREEN + "Installing libreoffice...")
         os.system("sudo snap install libreoffice")
 
 
 # =----------------------------------------------------------------------
-class internet():
-    banner = '''
+class internet:
+    banner = """
      ___ _   _ _____ _____ ____  _   _ _____ ______
     |_S_| \ | |_ A _| _C__|  H \| \H| | __I_|_ T  _|
      | ||  \| | | | |  _| | |_) |  \| |  _|   | |
      | || |\  | | | | |___|  _ <| |\  | |___  | |  
     |___|_| \_| |_| |_____|_| \_\_| \_|_____| |_|  
-    '''
+    """
 
     def __init__(self):
         clearScr()
-        print(color.LYELLOW+self.banner)
+        print(color.LYELLOW + self.banner)
 
         print(" 〘1〙═〢Google Chrome")
         print(" 〘2〙═〢Mozilla Firefox")
@@ -409,13 +498,13 @@ class internet():
         print(" 〘7〙═〢Opera browser")
         print(" 〘77〙═〢Back To Main Menu \n")
 
-        usrinput4 = input(color.XYZ+drprompt)
+        usrinput4 = input(color.XYZ + drprompt)
         clearScr()
         if usrinput4 == "1":
             intr.gchrome()
 
         elif usrinput4 == "2":
-            print('this is under devlopment')
+            print("this is under devlopment")
         elif usrinput4 == "4":
             intr.mozilla()
         elif usrinput4 == "3":
@@ -435,7 +524,7 @@ class internet():
         self.completed()
 
     def completed(self):
-        input(color.LYELLOW+"Completed,press Enter key to go back")
+        input(color.LYELLOW + "Completed,press Enter key to go back")
         self.__init__()
 
 
@@ -444,19 +533,20 @@ class internet():
 
 # class development and programming
 
+
 class devlopments:
-    banner = '''
+    banner = """
      ____                 _                                  _   
     |  _ \  _____   _____| | ___  _ __  _ __ ___   ___ _ __ | |_ 
     | | | |/ _ \ \ / / _ \ |/ _ \| '_ \| '_ ` _ \ / _ \ '_ \| __|
     | |_| |  __/\ V /  __/ | (_) | |_) | | | | | |  __/ | | | |_ 
     |____/ \___| \_/ \___|_|\___/| .__/|_| |_| |_|\___|_| |_|\__|
                                  |_|                             
-    '''
+    """
 
     def __init__(self):
         clearScr()
-        print(color.WHITE+self.banner)
+        print(color.WHITE + self.banner)
 
         print("  〘1〙═〢 Pycharm CE")
         print("  〘2〙═〢 VS code")
@@ -468,7 +558,7 @@ class devlopments:
         print("  〘8〙═〢 Atom")
         print("  〘88〙═〢Back To Main Menu \n")
 
-        usrinput5 = input(color.RED+drprompt)
+        usrinput5 = input(color.RED + drprompt)
         clearScr()
         if usrinput5 == "1":
             dv.pycharm()
@@ -480,7 +570,7 @@ class devlopments:
             dv.sublimetext()
 
         elif usrinput5 == "4":
-            print('under development')
+            print("under development")
 
         elif usrinput5 == "5":
             dv.andstudio()
@@ -502,14 +592,15 @@ class devlopments:
         self.completed()
 
     def completed(self):
-        input(color.GREEN+"Completed,press Enter key to go back")
+        input(color.GREEN + "Completed,press Enter key to go back")
         self.__init__()
 
 
 # class utility Softwares
 
+
 class utility:
-    banner = '''
+    banner = """
      _   _ _____ ___ _     ___ _______   __
     | | | |_   _|_ _| |   |_ _|_   _\ \ / /
     | | | | | |  | || |    | |  | |  \ V / 
@@ -517,11 +608,11 @@ class utility:
      \___/  |_| |___|_____|___| |_|   |_|  
                                        
 
-    '''
+    """
 
     def __init__(self):
         clearScr()
-        print(color.GREEN+self.banner)
+        print(color.GREEN + self.banner)
 
         print("  〘1〙═〢 Stacer(best GUI system monitor software")
         print("  〘2〙═〢 Geany GUI text editor")
@@ -571,7 +662,7 @@ class utility:
         self.completed()
 
     def completed(self):
-        input(color.GREEN+"Completed,press Enter key to go back")
+        input(color.GREEN + "Completed,press Enter key to go back")
         self.__init__()
 
 
