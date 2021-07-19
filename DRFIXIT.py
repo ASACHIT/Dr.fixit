@@ -576,10 +576,10 @@ class devlopments:
             dv.andstudio()
 
         elif usrinput5 == "6":
-            print("under development")
+           dv.phpStormInst()
 
         elif usrinput5 == "7":
-            print("under development")
+            dv.flutterInst()
 
         elif usrinput5 == "8":
             dv.atom()
