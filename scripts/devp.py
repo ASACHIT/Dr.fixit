@@ -106,3 +106,48 @@ class andstudio:
                 mm.color.LYELLOW
                 + "\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you"
             )
+
+
+class flutterInst:
+    def __init__(self):
+        print(mm.color.GREEN + "Checking if Flutter is installed or not...")
+        if not shutil.which("flutter"):
+            self.install()
+        else:
+            print(mm.color.GREEN + ain)
+
+    def install(self):
+        print(mm.color.LYELLOW + "Flutter is not installed !!")
+        time.sleep(1.5)
+        print(mm.color.LYELLOW + "Installing...")
+        try:
+            os.system("sudo snap refresh && sudo snap install flutter --classic")
+        except os.error:
+            print(mm.color.LYELLOW + "i was unable to install flutter")
+            time.sleep(2)
+            print(
+                mm.color.LYELLOW
+                + "\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you"
+            )
+
+class phpStormInst:
+    def __init__(self):
+        print(mm.color.GREEN + "Checking if PHP Storm  is installed or not...")
+        if not shutil.which("phpstorm"):
+            self.install()
+        else:
+            print(mm.color.GREEN + ain)
+
+    def install(self):
+        print(mm.color.LYELLOW + "Php Storm  is not installed !!")
+        time.sleep(1.5)
+        print(mm.color.LYELLOW + "Installing...")
+        try:
+            os.system("sudo snap refresh && sudo snap install phpstorm --classic")
+        except os.error:
+            print(mm.color.LYELLOW + "i was unable to install phpstorm")
+            time.sleep(2)
+            print(
+                mm.color.LYELLOW
+                + "\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you"
+            )
