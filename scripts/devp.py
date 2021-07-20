@@ -36,13 +36,8 @@ class vscode:
         print(mm.color.LYELLOW + "Vs code is not installed !!")
         time.sleep(1.5)
         print(mm.color.LYELLOW + "Installing...")
-        os.system(
-            "sudo apt install curl && curl https://az764295.vo.msecnd.net/stable/054a9295330880ed74ceaedda236253b4f39a335/code_1.56.2-1620838498_amd64.deb -o vs.deb"
-        )
+        os.system("sudo snap install code --classic")
         time.sleep(1)
-        os.system("sudo dpkg -i vs.deb")
-        time.sleep(1)
-        os.system("sudo rm -rf vs.deb")
         print(mm.color.LYELLOW + "Visual studio code installed !!")
 
 
@@ -98,7 +93,8 @@ class andstudio:
         time.sleep(1.5)
         print(mm.color.LYELLOW + "Installing...")
         try:
-            os.system("sudo snap refresh && sudo snap install android-studio --classic")
+            os.system(
+                "sudo snap refresh && sudo snap install android-studio --classic")
         except os.error:
             print(mm.color.LYELLOW + "i was unable to install Android studio")
             time.sleep(2)
@@ -129,6 +125,7 @@ class flutterInst:
                 mm.color.LYELLOW
                 + "\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you"
             )
+
 
 class phpStormInst:
     def __init__(self):

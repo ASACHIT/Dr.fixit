@@ -6,7 +6,6 @@ ain = "Already Installed"
 
 
 class color:
-
     BLUE = "\033[94m"
     GREEN = "\033[92m"
     RED = "\033[91m"

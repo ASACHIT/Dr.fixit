@@ -141,14 +141,19 @@ def banr():
         )
     )
     print(
-        colored("    ____        _____ _____  _____ _____", "magenta", attrs=["bold"])
+        colored("    ____        _____ _____  _____ _____",
+                "magenta", attrs=["bold"])
     )
-    print(colored("   |  _ \  _ __|  ___|_ _\ \/ /_ _|_   _|", "green", attrs=["bold"]))
-    print(colored("   | | | || '__| |_   | | \  / | |  | |  ", "cyan", attrs=["bold"]))
+    print(colored("   |  _ \  _ __|  ___|_ _\ \/ /_ _|_   _|",
+          "green", attrs=["bold"]))
+    print(colored("   | | | || '__| |_   | | \  / | |  | |  ",
+          "cyan", attrs=["bold"]))
     print(
-        colored("   | |_| || |  |  _|  | | /  \ | |  | |  ", "yellow", attrs=["bold"])
+        colored("   | |_| || |  |  _|  | | /  \ | |  | |  ",
+                "yellow", attrs=["bold"])
     )
-    print(colored("   |____(_)_|  |_|   |___/_/\_\___| |_| ", "blue", attrs=["bold"]))
+    print(colored("   |____(_)_|  |_|   |___/_/\_\___| |_| ",
+          "blue", attrs=["bold"]))
     print(
         colored(
             "   ═════════════════════════════════════════════════════\n",
@@ -275,7 +280,7 @@ class drfix:
             ══════════════════════════
             |sᴏғᴛᴡᴀʀᴇs/ᴀᴘᴘ sᴛᴏʀᴇ ғᴏʀ ʟɪɴᴜx|
             ══════════════════════════ 
-                    Version-2.2
+                    Version-2.3
             ════════════════════════════ 
            |ᴄᴀᴛᴀɢᴏʀɪᴇs ᴏғ sᴏᴛᴡᴀʀᴇs ᴛᴏ ɪɴsᴛᴀʟʟ|
             ════════════════════════════
@@ -352,7 +357,7 @@ class drfix:
 def cont():
     print(
         color.CYAN
-        + """Greets TO Dibash Thapa """
+        + """Conrtibutors- Bibhu Kiju """
         + color.GREEN
         + """
      
@@ -576,7 +581,7 @@ class devlopments:
             dv.andstudio()
 
         elif usrinput5 == "6":
-           dv.phpStormInst()
+            dv.phpStormInst()
 
         elif usrinput5 == "7":
             dv.flutterInst()

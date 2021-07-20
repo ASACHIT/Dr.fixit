@@ -133,13 +133,10 @@ class speedtest:
 
         if not shutil.which("speedtest-cli"):
             self.spdrun()
-
         else:
             self.run()
-
     def run(self):
         os.system("speedtest-cli")
-
     def spdrun(self):
         os.system("python3 -m pip install speedtest-cli")
         time.sleep(2)

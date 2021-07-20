@@ -110,7 +110,8 @@ def update():
             "sudo apt update -y && sudo apt full-upgrade -y && sudo apt dist-upgrade -y"
         )
     except os.error:
-        print("sorry :(. this command only runs in distor based in apt package manager")
+        print(
+            "sorry :(. this command only runs in distor based in apt package manager")
         time.sleep(2.5)
 
     print(color.GREEN + "DONE !!")
