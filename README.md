@@ -12,7 +12,7 @@ python3 DRFIXIT.py
 
 **[2] Fedora**
 
-**[3] Manjaro OS**
+**[3] Arch Based Os**
 
 **[4] Linux mint**
 
