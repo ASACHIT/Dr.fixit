@@ -18,15 +18,30 @@ python3 DRFIXIT.py
 
 **[5] Centos**
 
-**[6] Arch Linux**
+**[6] other debian based Distros..**
 
-**[7] other debian based Distros..**
+**[7] It may run in other distro also...(not tested)**
 
-**[8] It may run in other distro also...(not tested)**
 
 # It can 
 ```Install Most Have softwares as per Users Need```
 
 ```Script can Fix minor Issues that occur in linux```
+``` Test Internet Speed From terminal 🤣 ```
 
 **(It uses snap and systems package manager)**
+
+# Screenshots
+## Main Screen
+![Mainscreen](/sc/main.png)
+
+## Multimedia catagory
+![Multimedia-class](/sc/mm.png)
+
+## Internet Catagory
+![Internet](/sc/internet.png)
+
+## Devlopment/Programming Softwares
+![Dev](/sc/dev.png)
+## Utility softwares / Misc
+![utility](/sc/util.png)
