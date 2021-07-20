@@ -35,10 +35,10 @@ python3 DRFIXIT.py
 ## Main Screen
 ![Mainscreen](/sc/main.png)
 
-## Multimedia catagory
+## Multimedia category
 ![Multimedia-class](/sc/mm.png)
 
-## Internet Catagory
+## Internet Category
 ![Internet](/sc/internet.png)
 
 ## Devlopment/Programming Softwares
