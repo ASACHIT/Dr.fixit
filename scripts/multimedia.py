@@ -1,7 +1,7 @@
 import os
 import shutil
 import time
-
+import scripts.functions as er
 ain = "Already Installed"
 
 
@@ -31,10 +31,9 @@ class vlc:
 
     def install(self):
         try:
-
             os.system("snap install vlc")
         except OSError:
-            print("Failed to install :(")
+            er.issue("Vlc")
             exit()
 
 
@@ -55,7 +54,7 @@ class spotify:
         try:
             os.system("snap install spotify")
         except OSError:
-            print("Failed to install :(")
+            er.issue("Spotify")
             exit()
 
 
@@ -74,7 +73,7 @@ class Rythmbox:
         try:
             os.system("apt install rhythmbox")
         except OSError:
-            print("Failed to install :(")
+            er.issue("Rhythmbox")
             exit()
 
 
@@ -93,7 +92,7 @@ class GIMP:
         try:
             os.system("snap install gimp")
         except OSError:
-            print("Failed to install :(")
+            er.issue("GIMP")
             exit()
 
 
@@ -109,7 +108,7 @@ class adcity:
         try:
             os.system("snap install audacity")
         except OSError:
-            print("Failed to install :(")
+            er.issue("Audacity")
             exit()
 
 
@@ -125,4 +124,4 @@ class shotcut:
         try:
             os.system("snap install shotcut --classic")
         except os.error:
-            print("Failed to install :(, please submitt issue in Github. ")
+            er.issue("Shotcut")

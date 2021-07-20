@@ -1,7 +1,7 @@
 import os
 import shutil
 import time
-
+import scripts.functions as er
 import distro
 
 from scripts import multimedia as mm
@@ -25,8 +25,8 @@ class geany:
         if dist == "kali" or "ubuntu" or "debian":
             os.system("sudo apt install geany")
 
-        elif dist == "arch":
-            os.system("sudo snap install geany-gtk --edge")
+        elif dist == "arch" or "manjaro":
+            os.system("sudo pacman -S geany")
 
         elif dist == "fedora":
             os.system("sudo snap install geany-gtk --edge")
@@ -34,8 +34,8 @@ class geany:
         else:
             try:
                 os.system("sudo snap install geany-gtk --edge")
-            except OSError as errr:
-                print("i was unable to install geany :(   error=", errr)
+            except OSError:
+                er.issue("geany")
                 exit()
 
 
@@ -55,28 +55,26 @@ class stacer:
         if dist == "kali":
             os.system("sudo apt install stacer")
 
-        elif dist == "arch":
+        elif dist == "arch" or "manjaro":
             os.system("pacman -s stacer")
 
         elif dist == "fedora":
             os.system("yum install stacer")
         elif dist == "gentoo":
             os.system("emerge -av stacer")
-
-        elif dist == "manjaro":
-            os.system("sudo pacman -S stacer")
-
         else:
             try:
                 os.system("sudo apt install stacer")
-            except OSError as errr:
-                print("i was unable to install geany :( error=", errr)
-                time.sleep(3)
-                print(
-                    "you can install manually from here.. link- https://github.com/oguzhaninan/Stacer/releases "
-                )
-                time.sleep(3)
-                exit()
+            except:
+                try:
+                    os.system("sudo pacman -S Stacer")
+                except:
+                    er.issue("Stacer")
+                    time.sleep(3)
+                    print(
+                        "you can install manually from here.. link- https://github.com/oguzhaninan/Stacer/releases")
+                    time.sleep(3)
+                    exit()
 
 
 class obs:
@@ -84,7 +82,6 @@ class obs:
         print(mm.color.GREEN + "checking OBS in system...")
         if not shutil.which("obs-studio"):
             self.install()
-
         else:
             print(ain)
 
@@ -112,8 +109,8 @@ class obs:
         else:
             try:
                 os.system("sudo snap install obs-studio")
-            except OSError as errr:
-                print("i was unable to install geany :( error=", errr)
+            except OSError:
+                er.issue("OBS-studio")
                 time.sleep(3)
                 print(
                     "you can install manually from here.. link- https://obsproject.com/wiki/install-instructions#linux "
@@ -150,8 +147,8 @@ class msteam:
         else:
             try:
                 os.system("sudo snap install teams")
-            except OSError as errr:
-                print("i was unable to install teams :(   error=", errr)
+            except OSError:
+                er.issue("MS TEAM")
                 time.sleep(3)
                 print(
                     "you can install manually from here.. link- https://www.microsoft.com/en-ww/microsoft-teams/download-app "
@@ -188,14 +185,9 @@ class ksnip:
         else:
             try:
                 os.system("sudo snap install ksnip")
-            except OSError as errr:
-                print("i was unable to install ksnip :(   error=", errr)
+            except OSError:
+                er.issue("Ksnip")
                 time.sleep(3)
-                print(
-                    "please submitt  issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you"
-                )
-                time.sleep(5)
-
                 exit()
 
 
@@ -211,13 +203,7 @@ class qbit:
         try:
             os.system("snap install qbittorrent-arnatious")
         except os.error:
-            print(
-                "\ni was unable to install qbittorrent-arnatious in your system..:(\n"
-            )
-            time.sleep(2)
-            print(
-                "please submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you"
-            )
+            er.issue("qbittorrents")
 
 
 class uget:
@@ -233,9 +219,7 @@ class uget:
             os.system("snap install uget --edge")
 
         except os.error:
-            print(
-                "\ni was unable to install uget.. \nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you"
-            )
+            er.issue("Uget")
 
 
 class Gforce:
@@ -251,11 +235,7 @@ class Gforce:
             os.system("snap install geforcenow")
 
         except os.error:
-            print("\ni was unable to install Geforcenow in your system... ")
-            time.sleep(3)
-            print(
-                "\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you"
-            )
+            er.issue("Geforce now")
 
 
 class handbrake:
@@ -272,11 +252,7 @@ class handbrake:
             os.system("snap install handbrake-jz")
 
         except os.error:
-            print("\ni was unable to install Handbrake in your system... ")
-            time.sleep(2)
-            print(
-                "\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you"
-            )
+            er.issue("Handbrake")
 
 
 class kedenlive:
@@ -293,8 +269,4 @@ class kedenlive:
             os.system("snap install kdenlive")
 
         except os.error:
-            print("\ni was unable to install Handbrake in your system... ")
-            time.sleep(2)
-            print(
-                "\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you"
-            )
+            er.issue("Kdenlive")

@@ -202,8 +202,8 @@ class check_snap:
         dist = distro.linux_distribution(full_distribution_name=False)[0]
 
         if dist == "kali" or "ubuntu" or "parrotos":
-            b = "sudo apt install snapd && sudo systemctl enable --now snapd apparmor"
-            os.system(f"{b}")
+            cmd = "sudo apt install snapd && sudo systemctl enable --now snapd apparmor"
+            os.system(f"{cmd}")
 
         elif dist == "arch":
             os.system("git clone https://aur.archlinux.org/snapd.git")
@@ -220,19 +220,16 @@ class check_snap:
         elif dist == "centos":
             os.system("sudo yum install epel-release")
             os.system(
-                "sudo yum install snapd && sudo systemctl enable --now snapd.socket && sudo ln -s /var/lib/snapd/snap /snap"
-            )
+                "sudo yum install snapd && sudo systemctl enable --now snapd.socket && sudo ln -s /var/lib/snapd/snap /snap")
             exit()
         elif dist == "manjaro":
             os.system(
-                "sudo pacman -S snapd && sudo systemctl enable --now snapd.socket"
-            )
+                "sudo pacman -S snapd && sudo systemctl enable --now snapd.socket")
             os.system("sudo ln -s /var/lib/snapd/snap /snap")
 
         elif dist == "mint":
             os.system(
-                "sudo rm /etc/apt/preferences.d/nosnap.pref && sudo apt update && sudo apt install snapd"
-            )
+                "sudo rm /etc/apt/preferences.d/nosnap.pref && sudo apt update && sudo apt install snapd")
 
         else:
             try:
@@ -241,9 +238,7 @@ class check_snap:
                 print("i was unable to install geany :( error=", errr)
                 time.sleep(4)
 
-                print(
-                    "please submitt a issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you"
-                )
+                print("please submitt a issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you")
                 time.sleep(5)
                 exit()
 
@@ -258,7 +253,6 @@ class upsnap:
 class drfix:
     def __init__(self):
         clearScr()  # clear
-
         threading.Thread(target=check_snap).start()  # check snap in system
         threading.Thread(target=logo).start()  # to run parallely
         clearScr()  # clear screen
@@ -319,20 +313,16 @@ class drfix:
             fixerr.nosound()
         elif usrinput == "4":
             fixerr.bt()
-
         elif usrinput == "2":
             fixerr.update()
-
         elif usrinput == "1":
             fixerr.uperror()
-
         elif usrinput == "0":
             upsnap()
             time.sleep(1)
             supdate()
         elif usrinput == "00":
             cont()
-
         elif usrinput == "11":
             intr.speedtest()
         elif usrinput == "99":
@@ -349,7 +339,6 @@ class drfix:
     def completed(self):
         input("Completed, press Enter key to go back")
         self.__init__()
-
 
 # -----------------------
 
@@ -471,7 +460,6 @@ class libof:
         print(color.GREEN + "Checking if libreoffice is installed or not.")
         if not shutil.which("libreoffice"):
             self.install()
-
         else:
             print(ain)
 
@@ -479,8 +467,9 @@ class libof:
         print(color.GREEN + "Installing libreoffice...")
         os.system("sudo snap install libreoffice")
 
-
 # =----------------------------------------------------------------------
+
+
 class internet:
     banner = """
      ___ _   _ _____ _____ ____  _   _ _____ ______
@@ -502,12 +491,10 @@ class internet:
         print(" 〘6〙═〢Brave Browser")
         print(" 〘7〙═〢Opera browser")
         print(" 〘77〙═〢Back To Main Menu \n")
-
         usrinput4 = input(color.XYZ + drprompt)
         clearScr()
         if usrinput4 == "1":
             intr.gchrome()
-
         elif usrinput4 == "2":
             print("this is under devlopment")
         elif usrinput4 == "4":
@@ -532,10 +519,6 @@ class internet:
         input(color.LYELLOW + "Completed,press Enter key to go back")
         self.__init__()
 
-
-# -------------------------------------------------------------------------------------------------------------
-
-
 # class development and programming
 
 
@@ -552,7 +535,6 @@ class devlopments:
     def __init__(self):
         clearScr()
         print(color.WHITE + self.banner)
-
         print("  〘1〙═〢 Pycharm CE")
         print("  〘2〙═〢 VS code")
         print("  〘3〙═〢 Sublime text")
@@ -562,36 +544,26 @@ class devlopments:
         print("  〘7〙═〢 Flutter")
         print("  〘8〙═〢 Atom")
         print("  〘88〙═〢Back To Main Menu \n")
-
         usrinput5 = input(color.RED + drprompt)
         clearScr()
         if usrinput5 == "1":
             dv.pycharm()
-
         elif usrinput5 == "2":
             dv.vscode()
-
         elif usrinput5 == "3":
             dv.sublimetext()
-
         elif usrinput5 == "4":
             print("under development")
-
         elif usrinput5 == "5":
             dv.andstudio()
-
         elif usrinput5 == "6":
             dv.phpStormInst()
-
         elif usrinput5 == "7":
             dv.flutterInst()
-
         elif usrinput5 == "8":
             dv.atom()
-
         elif usrinput5 == "88":
             drfix()
-
         else:
             self.__init__()
         self.completed()
@@ -599,7 +571,6 @@ class devlopments:
     def completed(self):
         input(color.GREEN + "Completed,press Enter key to go back")
         self.__init__()
-
 
 # class utility Softwares
 
@@ -611,14 +582,11 @@ class utility:
     | | | | | |  | || |    | |  | |  \ V / 
     | |_| | | |  | || |___ | |  | |   | |  
      \___/  |_| |___|_____|___| |_|   |_|  
-                                       
-
     """
 
     def __init__(self):
         clearScr()
         print(color.GREEN + self.banner)
-
         print("  〘1〙═〢 Stacer(best GUI system monitor software")
         print("  〘2〙═〢 Geany GUI text editor")
         print("  〘3〙═〢 OBS video recorder")
@@ -630,26 +598,20 @@ class utility:
         print("  〘9〙═〢 Kdenlive Best Video editor")
         print("  〘0〙═〢 Handbrake")
         print("  〘99〙═〢Back To Main Menu \n")
-
         usrinput6 = input(drprompt)
         clearScr()
         if usrinput6 == "1":
             utl.stacer()
-
         elif usrinput6 == "2":
             utl.geany()
-
         elif usrinput6 == "3":
             utl.obs()
-
         elif usrinput6 == "4":
             utl.ksnip()
-
         elif usrinput6 == "5":
             utl.msteam()
         elif usrinput6 == "6":
             utl.qbit()
-
         elif usrinput6 == "7":
             utl.uget()
         elif usrinput6 == "8":
@@ -658,10 +620,8 @@ class utility:
             utl.kedenlive()
         elif usrinput6 == "0":
             utl.handbrake()
-
         elif usrinput6 == "99":
             drfix()
-
         else:
             self.__init__()
         self.completed()
@@ -672,7 +632,6 @@ class utility:
 
 
 if __name__ == "__main__":
-
     try:
         drfix()
     except KeyboardInterrupt:

@@ -1,7 +1,7 @@
 import os
 import shutil
 import time
-
+import scripts.functions as er
 from scripts import multimedia as mm
 
 ain = "Already Installed"
@@ -74,10 +74,7 @@ class atom:
         except os.error:
             print(mm.color.LYELLOW + "i was unable to install atom")
             time.sleep(2)
-            print(
-                mm.color.LYELLOW
-                + "\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you"
-            )
+            er.issue("Atom")
 
 
 class andstudio:
@@ -98,10 +95,7 @@ class andstudio:
         except os.error:
             print(mm.color.LYELLOW + "i was unable to install Android studio")
             time.sleep(2)
-            print(
-                mm.color.LYELLOW
-                + "\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you"
-            )
+            er.issue("Android Studio")
 
 
 class flutterInst:
@@ -121,10 +115,7 @@ class flutterInst:
         except os.error:
             print(mm.color.LYELLOW + "i was unable to install flutter")
             time.sleep(2)
-            print(
-                mm.color.LYELLOW
-                + "\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you"
-            )
+            er.issue("Flutter")
 
 
 class phpStormInst:
@@ -144,7 +135,4 @@ class phpStormInst:
         except os.error:
             print(mm.color.LYELLOW + "i was unable to install phpstorm")
             time.sleep(2)
-            print(
-                mm.color.LYELLOW
-                + "\nplease submitt issue in this link- https://github.com/SACHIT69/Dr.fixit/issues ||Any feedback would be greatly appreciated. Thank you"
-            )
+            er.issue("Php Storm")
