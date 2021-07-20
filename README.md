@@ -27,6 +27,7 @@ python3 DRFIXIT.py
 ```Install Most Have softwares as per Users Need```
 
 ```Script can Fix minor Issues that occur in linux```
+
 ``` Test Internet Speed From terminal 🤣 ```
 
 **(It uses snap and systems package manager)**
