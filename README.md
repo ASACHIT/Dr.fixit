@@ -1,6 +1,6 @@
 # Dr.fixit
-Python script to setup linux with important softwares and fixing minor issues
-# TO Run It, Run Following Commands
+Python script for installing vital software and resolving small difficulties on Linux.
+# To use it, do the commands below.
 ```
 git clone https://github.com/ASACHIT/Dr.fixit.git
 cd Dr.fixit
@@ -24,13 +24,13 @@ python3 DRFIXIT.py
 
 
 # It can 
-```Install Most Have softwares as per Users Need```
+```Install the most often used softwares based on the needs of the users.```
 
-```Script can Fix minor Issues that occur in linux```
+```Minor linux issues can be resolved with this script.```
 
 ``` Test Internet Speed From terminal 🤣 ```
 
-**(It uses snap and systems package manager)**
+**(It makes use of snap as well as the system package manager.)**
 
 # Screenshots
 ## Main Screen
